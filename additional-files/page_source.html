@@ -1,0 +1,684 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="shortcut icon" href="images/favicon.jpg">
+    <title>Alumni | International Institute of Professional Studies, Devi Ahilya Vishwavidhalay</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/newfile.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="yamm/yamm.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/faculty_profile.js"></script>
+  </head>
+  <body>
+    <!--Header Open-->
+    <!--Hide Navbar Open-->
+       <div class="wrapper hidden-xs">
+      <div id="header-style">
+          <div class="container">
+                            <ul class="nav navbar-nav">
+                                <li><a href="https://davv.mponline.gov.in/Portal/Services/DAVV/SIS/Main_Page.aspx" target="_blank">Student</a></li>
+                                <li><a href="#FacultyModal" data-toggle="modal">Faculty &amp; Staff</a></li>
+                                <li><a href="alumni_reg.php">Alumni</a></li>
+                                <li><a href="iips_newsletter.php">IIPS Newsletter</a></li>
+                               
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">     
+                                <li><a href="sitemap.php">Sitemap</a></li>
+                                <li><a href="feedbackForm.php">Feedback</a></li>
+                                <form class="navbar-form navbar-left" id="searchForm" action="https://www.google.co.in/webhp?hl=en#hl=en&amp;q=iips davv " target="_blank">
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" id="txtSearch" class="form-control" placeholder="Search IIPS Web">
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-default" type="submit">
+                                                    <i class="glyphicon glyphicon-search"></i>
+                                                </button>
+                                            </div>
+                                    </div>
+                                </form>
+                              
+                            </ul> 
+          </div><!-- container-->
+      </div><!--header-style-->
+    </div>
+    <!--Hide Navbar Close-->
+
+    <!--Main navbar starts-->
+    <div class="container">
+       
+          <div>
+              <nav class="navbar navbar-default yamm">
+                <div class="container">
+                    <div class="row"> 
+                        <div class="navbar-header">
+                            <h6>
+                              <a href="index.php">
+                                  <img src="images/iips_logo.png" class="img img-responsive iips-logo-css col-lg-6 col-sm-6" style="width:250px;box-shadow: 2px 2px 2px 2px gray;padding:0px ;border-radius:5px; ">
+                              </a>
+                            </h6>
+                            <button type="button" class="navbar-toggle collapsed" id="no-border" data-toggle="collapse" data-target="#navbar-main" aria-expanded="false">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          </button>
+                        </div>
+                          <!-- Collect the nav links, forms, and other content for toggling -->
+                          <!--Visible Content-->
+                        <div class="collapse navbar-collapse" id="navbar-main">
+                                <div class="wrapper visible-xs">
+                                    <div class="container">
+                                        <div class="row">
+                                            <form id="searchFormResponsive" class="navbar-form navbar-left" role="search" target="_blank">
+                                                <div class="form-group">
+                                                    <input type="text" id="txtSearchResponsive" class="form-control" placeholder="Search">
+                                                </div>
+                                            </form> 
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-5 mybutton">
+                                                <a href="sitemap.php">Sitemap</a>
+                                            </div>
+                                            <div class="col-xs-1"></div>
+                                            <div class="col-xs-5 mybutton">
+                                                <a href="feedbackForm.php">Feedback</a>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                </div>
+                            <ul class="nav navbar-nav" id="test">
+								<!-- Home -->
+								<li class="dropdown yamm-fw" id="test_home">
+                                    <a href="index.php" class="dropdown-toggle navbar-underline navbar-two" id="no-underline">Home</a>
+								</li>
+                                <!--About-->
+                                <li class="dropdown yamm-fw" id="test_about">
+                                    <a href="#" class="dropdown-toggle navbar-underline navbar-two" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="no-underline">About<span class="caret"></span></a>
+                                    <ul class="dropdown-menu nav-margin" id="yamm-down-about" role="menu" style="margin:12px">
+                                        <div class="row image2">                
+                                            <div class="col-md-7 col-sm-9 hidden-xs" id="i6">
+                                                <div class="col-md-6 col-sm-6">
+                                                    <img src="images/about/image1.png" class="img-responsive" alt="About IIPS image">
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    The International Institute of Professional Studies, a department of Devi Ahilya Vishwavidyalaya established in the year 1992 is an academic mentor of its kind and an eminently practical institute, recognized by AICTE. With the quality in the content, scope and professionalism of its programs.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 col-sm-3">
+                                                <div class="col-md-6">                 
+                                                    <!--<li id="link-style"><a href="about.php">Overview</a></li>-->
+                                                    <li id="link-style"><a href="about_university.php">About University</a></li>
+                                                    <li id="link-style"><a href="history.php">History</a></li>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <li id="link-style"><a href="infrastructure.php">Infrastructure</a></li>
+                                                    <li id="link-style"><a href="about_iips.php">About IIPS</a></li>
+                                                     <li id="link-style"><a href="annual_report.php">Annual Report IIPS</a></li>
+                                                    <li id="link-style"><a href="reach_us.php">Reach Us</a></li>
+                                                </div>
+                                            </div>
+                                        </div>     
+                                    </ul>
+                                </li>
+
+                                <!--Programs-->
+                                <li class="dropdown yamm-fw" id="test_programs">
+                                    <a href="#" class="dropdown-toggle navbar-underline navbar-two" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false" id="no-underline">Programmes<span class="caret"></span></a>
+                                    <ul class="dropdown-menu nav-margin" id="yamm-down-programmes" style="margin:12px">
+                                        <div class="row image2">
+                                            <div class="col-md-6 col-sm-3 hidden-xs" id="i6">
+                                                <div class="col-md-6 col-sm-6">
+                                                    <img src="images/admission/auditorium.jpg" class="img-responsive" alt="Responsive image">
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    Every year CUET is conducted in the month of May or June for various courses at Graduate and post graduate level. The students from all over India apply to get admission through this exam. In this written exam. the student’s general aptitude, language knowledge and mathematical ability is tested.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-9">
+                                                <div class="col-md-8    ">
+                                                    <div class="panel-group" id="accordion">
+
+                                                    
+                                                        <div class="panel panel-default">
+                                                              <div class="panel-heading">
+                                                                <h4 class="panel-title">
+                                                                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                                                  Integrated Programmes</a>
+                                                                </h4>
+                                                              </div>
+                                                              <div id="collapse3" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                  <div class="nav nav-stacked" role="tablist">
+                                                                        <li><a href="p_mtech-cs.php" class="menuLi" style="padding:0px">M.Tech.(CS)(5 Yrs.) [New Programme]</a></li>
+                                                                      <li><a href="p_mca.php" class="menuLi" style="padding:0px">MCA(5 Yrs.)</a></li>
+                                                                      <li><a href="p_mtech.php" class="menuLi" style="padding:0px">M.Tech.(IT)(5 Yrs.)</a></li>
+                                                                      <li><a href="p_mbams5.php" class="menuLi" style="padding:0px">MBA(MS)(5 Yrs.)</a></li>            
+                                                                      <li><a href="p_mbat5.php" class="menuLi" style="padding:0px">MBA(Tourism)(5 Yrs.)</a></li>
+                                                                  </div>
+
+                                                                </div>
+                                                              </div>
+                                                        </div>
+
+                                                        <div class="panel panel-default">
+                                                              <div class="panel-heading">
+                                                                <h4 class="panel-title">
+                                                                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                                                  UG Programmes</a>
+                                                                </h4>
+                                                              </div>
+                                                              <div id="collapse1" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                  <div class="nav nav-stacked" role="tablist">
+                                                         
+                                                                      <li><a href="p_bcom.php" class="menuLi" style="padding:0px">B.Com.(3 Yrs.)/B.Com.(Hons.)(4 Yrs.)</a></li>
+                                                                      
+                                                                  </div>
+
+                                                                </div>
+                                                              </div>
+                                                        </div>
+
+                                                        <div class="panel panel-default">
+                                                              <div class="panel-heading">
+                                                                <h4 class="panel-title">
+                                                                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                                                  PG Programmes</a>
+                                                                </h4>
+                                                              </div>
+                                                              <div id="collapse2" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                  <div class="nav nav-stacked" role="tablist">
+                                                         
+                                                                      <li><a href="p_mbams2.php" class="menuLi" style="padding:0px">MBA(MS)(2 Yrs.)</a></li>
+                                                                      <li><a href="p_mbata2.php" class="menuLi" style="padding:0px">MBA(TA)(2 Yrs.)</a></li>
+                                                                      <li><a href="p_mbaapr2.php" class="menuLi" style="padding:0px">MBA(APR)(2 Yrs.)</a></li>
+                                                                      <li><a href="p_mbaent2.php" class="menuLi" style="padding:0px">MBA(Entrepreneurship)(2 Yrs.)</a></li>
+                                                                  </div>
+
+                                                                </div>
+                                                              </div>
+                                                        </div>
+
+                                                        <div class="panel panel-default">
+                                                              <div class="panel-heading">
+                                                                <h4 class="panel-title">
+                                                                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                                                                  Doctoral Programmes</a>
+                                                                </h4>
+                                                              </div>
+                                                              <div id="collapse4" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                  <div class="nav nav-stacked" role="tablist">
+                                                         
+                                                                      <li><a href="https://www.dauniv.ac.in/det2024" target="_blank" class="menuLi" style="padding:0px">Ph.D. in Computer Science</a></li>
+                                                                      <li><a href="https://www.dauniv.ac.in/det2024" target="_blank" class="menuLi" style="padding:0px">Ph.D. in Management</a></li>
+                                                                      
+                                                                  </div>
+
+                                                                </div>
+                                                              </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                    
+                                                <div class="col-md-4"> 
+                                                    <!--<li id="link-style"><a href="courses.php">Courses</a></li>-->
+                                                    <li id="link-style"><a href="fee_structure.php">Fees Structure</a></li>
+                                                    <li id="link-style"><a href="how_to_apply.php">How to Apply</a></li>
+                                                </div>
+                                                
+                                            </div>
+                                        </div><!--container-->        
+                                    </ul>
+                                </li>
+                                
+
+                                <!--Academics-->
+                                <li class="dropdown yamm-fw" id="test_academics">
+                                    <a href="#" class="dropdown-toggle navbar-underline" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="no-underline">Academics<span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu nav-margin" id="yamm-down-academics" style="margin:12px">
+                                        <div class="row image2">
+                                            <div class="col-md-7 col-sm-8 hidden-xs" id="i6">
+                                                <div class="col-md-6 col-sm-6">
+                                                    <img src="images/academics/012.jpg" class="img img-responsive" alt="Responsive image">
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    The institute provides ample opportunities to students with a rigorous and challenging curriculum with flexibility to allow students to tailor their education to meet their professional and personal interests and goals.      
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 col-sm-4">
+                                                <div class="col-md-6">
+                                                    <!--<li id="link-style"><a href="academics.php">Overview</a></li>-->
+                                                    <li id="link-style"><a href="syllabus.php">Syllabus</a></li>
+                                                    <li id="link-style"><a href="static/pdf/acc_calendar/AcademicCalenderJulyDec2025.pdf" target="_blank">Academic Calendar</a></li>
+                                                  <!--  <li id="link-style"><a href="results.php">Results</a></li> -->
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <!-- <li id="link-style"><a href="news_and_announcements.php">News &amp; Announcements</a></li> -->
+                                                    <li id="link-style"><a href="faculty_profile.php">Faculty Profile</a></li>
+                                                    <li id="link-style"><a href="staff_profile.php">Staff Profile</a></li>
+                                                     <li id="link-style"><a href="feedback.php">Feedback Report</a></li>
+                                                      <li id="link-style"><a href="academic_audit.php">Academic Audit Report</a></li>
+                                                </div>
+                                            </div>
+                                        </div><!--container-->        
+                                    </ul>  
+                                </li>
+
+                                <!--Research -->
+                                <li class="dropdown yamm-fw" id="test-research">
+                                    <a href="#" class="dropdown-toggle navbar-underline navbar-two" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="no-underline">Research<span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu nav-margin" id="yamm-down-research" style="margin:12px">
+                                        <div class="row image2">      
+                                            <div class="col-md-7 col-sm-9 hidden-xs" id="i6">
+                                                <div class="col-md-6 col-sm-6">
+                                                    <img src="images/research/research_.png" class="img img-responsive" alt="Responsive image">
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    Research is a process to discover new knowledge. The development and research center allow students to learn standards that are currently adapted by industry. Mentors also guide students to publish new research papers.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 col-sm-3">
+                                                <div class="col-md-6">
+                                                    <!--<li id="link-style"><a href="research.php">Overview</a></li>-->
+													<li id="link-style"><a href="publication.php">Publication</a></li>
+                                                    <li id="link-style"><a href="research_cell.php">Research Center</a></li>
+                                                    <li id="link-style"><a href="development_center.php">Development Center</a></li>
+													<!--<li id="link-style"><a href="consultancy.php">Consultancy</a></li>-->
+                                                </div>
+                                                <div class="col-md-6">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>        
+                                    </ul>
+                                </li>
+								<!-- Placement -->
+								<li class="dropdown yamm-fw" id="test_placement">
+                                    <a href="placement.php" class="dropdown-toggle navbar-underline navbar-two" id="no-underline">Placements</a>
+								</li>
+                                <!--Campus Life-->
+                                <li class="dropdown yamm-fw" id="campus_life">
+                                    <a href="#" class="dropdown-toggle navbar-underline navbar-two" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="no-underline">Student Zone<span class="caret"></span>
+                                    </a>
+            	                     <ul class="dropdown-menu nav-margin" id="yamm-down-campus" style="margin:12px">
+                                      <div class="row image2">
+                                          <div class="col-md-7 col-sm-9 hidden-xs" id="i6">
+                                              <div class="col-md-6 col-sm-6">
+                                                  <img src="images/campuslife/campus.jpg" class="img-responsive" alt="Responsive image">
+                                              </div>
+                                              <div class="col-md-6 col-sm-6">
+                                                  Other than studies students also enjoy their college life by participating in different events.                                         </div>
+                                          </div>
+                                          <div class="col-md-5 col-sm-3">
+                                              <div class="col-md-6">
+                                                  <!--<li id="link-style"><a href="campus_life.php">Overview</a></li>-->
+                                                  <li id="link-style"><a href="event.php">Events </a></li>
+                                                  <li id="link-style"><a href="clubs.php">Students Club </a></li>
+                                                  <li id="link-style"><a href="scholarship.php">Scholarship </a></li>
+												  <li id="link-style"><a href="/sampoorna/Sampoorna.php">Sampoorna Club </a></li>
+                                                  <!--<li id="link-style"><a href="placement.php">Placements</a></li>-->
+                                              </div>
+                                              <div class="col-md-6">
+                                                  <li id="link-style"><a href="video_channel.php">Video Channels</a></li>
+                                                  <li id="link-style"><a href="gallery.php">Gallery</a></li>
+                                                  <li id="link-style"><a href="nss.php">NSS</a></li>
+                                              </div>
+                                          </div>
+                                      </div>        
+                                    </ul>
+                                </li>
+                                                            </ul>
+
+                            <div class="wrapper visible-xs">
+                              <h3 id="i38">Information for...</h3>
+                              <ul class="nav navbar-nav">
+                                  <li><a href="https://davv.mponline.gov.in/Portal/Services/DAVV/SIS/Main_Page.aspx" target="_blank">Students</a></li>
+                                  <li><a href="#FacultyModal" data-toggle="modal">Faculty &amp; Staff</a></li>
+                                  <li><a href="alumni_reg.php">Alumni</a></li>
+                                  <li><a href="iips_newsletter.php" target="_blank">IIPS Newsletter</a></li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div><!--Visible Content-->
+                </div>
+              </nav>
+          </div><!-- container-fluid -->
+   
+    </div><!-- row end-->
+   <!-- </div>--><!--Container Close--><!--Main navbar close-->
+	<br>
+   <div id="outerDiv">
+    <!-- modal -->
+    <div class="modal fade" id="FacultyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Sign-In</h4>
+                </div>
+                <div class="modal-body ">
+                    <form class="form-horizontal" role="form" action="/alumni_reg.php" method="post" id="signUp">
+                    <div class="form-group">
+                        <label for="inputEmail1" class="col-lg-3 control-label">User ID</label>
+                        <div class="col-lg-8">
+                            <input type="text" required="required" class="form-control" placeholder="User ID" name="username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword1" class="col-lg-3 control-label">Password</label>
+                        <div class="col-lg-8">
+                            <input type="password" class="form-control" required="required" name="password" placeholder="Password" id="password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-4 col-lg-8">
+                            <button type="submit" name="signIn1" class="btn btn-large btn-primary">OK</button>
+                            <button type="button" class="btn btn-large btn-primary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+<div class="container">
+  <div class="row">
+     <div class="col-md-3" id="sidebar">
+      <ul class="nav nav-stacked" role="tablist">
+        <br><br>
+        <li role="presentation" id="colm" class="active"><a href="#" onclick="alumni_get('reg')"><span class="fa fa-hand-o-right"></span>&nbsp;Alumni Registration</a></li>
+        <li role="presentation" id="colm"><a href="#" onclick="alumni_get('list')"><span class="fa fa-hand-o-right"></span>&nbsp;Alumni List</a></li>
+        <br>
+      </ul>
+    </div>
+    <div class="col-md-9" id="detail">                <h3 class="text-center"><b>Alumni Registration</b> </h3>  
+                    <address>
+                        <i class="fa fa-university"></i>&nbsp;&nbsp;Devi Ahilya University, Takshashila Campus Khandwa Road , Indore - 452001, INDIA<hr>
+                         <br>
+                    </address>
+                  <div class="row">
+                  <div class="col-xs-4 col-md-4">
+                  </div>
+                  <div class="col-xs-6 col-md-6">
+                  
+                      <form method="POST" id="alumni_save">
+                          <div class="form-group has-feedback">
+                              <input type="text" class="form-control" id="name" placeholder="Name" name="name" maxlength="100" required="">
+                              <span class="glyphicon glyphicon-user form-control-feedback" aria-hidden="true"></span>
+                          </div>
+                          <div class="form-group has-feedback">
+                              <span>Course:</span>
+                              <select id="course" name="course" class="form-control" placeholder="Course">
+                                <option>MCA (6 Years)</option>
+                                <option>M.Tech(IT)(5½ Years)</option>
+                                <option>B.Com(Hons.)</option>
+                                <option>MBA(MS)(5 Years)</option>
+                                <option>MBA(Toursim)</option>
+								<option>MBA(Tourism)(5 Years)</option>
+                                <option>MBA(MS)(2 Years)</option>
+								<option>MBA(Entrepreneurship)(2 Yrs)</option>
+                                <option>MBA(APR)</option>
+                                <option>MAPRM</option>
+                                <option>MTA</option>
+                                <option>BCA</option>
+                                <option>BCA(Hons.)</option>
+                                <option>BBA(MS)</option>
+                                <option>MMS(5 Years)</option>
+                                <option>BMS</option>
+                              </select>
+
+                          
+                          </div>
+                          <div class="form-group has-feedback">
+                              <input type="text" class="form-control" id="batch" placeholder="Batch(Like:IC-2K or IM-98 etc.)" maxlength="100" name="batch" required="">
+                              
+                          </div>
+                          <div class="form-group has-feedback">
+                              <input type="email" class="form-control" maxlength="100" id="email" placeholder="Email" name="email" required="">
+                              <span class="glyphicon glyphicon-envelope form-control-feedback" aria-hidden="true"></span>
+                          </div>
+                          <div class="form-group has-feedback">
+                              <input type="text" class="form-control" maxlength="13" size="13" id="phone" placeholder="Phone" name="phone">
+                              <span class="glyphicon glyphicon-phone form-control-feedback" aria-hidden="true"></span>
+                          </div>
+
+                          <div class="form-group has-feedback">
+                              <input type="text" class="form-control" maxlength="13" size="13" id="whatsapp" placeholder="WhatsApp No." name="whatsapp">
+                              <span class="glyphicon glyphicon-phone form-control-feedback" aria-hidden="true"></span>
+                          </div>
+
+                          <div class="form-group has-feedback">
+                              <input type="text" class="form-control" id="current" maxlength="50" placeholder="Current Designation" name="current" required="">
+                             
+                          </div>
+                          <div class="form-group has-feedback">
+                              <input type="text" class="form-control" id="company" maxlength="100" placeholder="Company Name" name="company" required="">
+                              
+                          </div>
+                          <div class="form-group has-feedback">
+                              <input type="url" class="form-control" id="linkedin" placeholder="LinkedIn URL(https://....)" maxlength="100" name="linkedin">
+                             
+                          </div>
+
+                          <div class="form-group has-feedback">
+                              <textarea name="txtCurrent" rows="2" cols="20" id="txtCurrent" class="form-control" maxlength="300" placeholder="Current Address (Max. 300 Characters)" autocomplete="Off" style="height: 140px; z-index: auto; position: relative; line-height: 20px; font-size: 14px; transition: none 0s ease 0s; background: transparent !important;"></textarea>
+                             
+                          </div>
+                          <div class="form-group has-feedback">
+                              <textarea name="txtPermanent" rows="2" cols="20" id="txtPermanent" class="form-control" maxlength="300" placeholder="Permanent Address (Max. 300 Characters)" autocomplete="Off" style="height: 140px; z-index: auto; position: relative; line-height: 20px; font-size: 14px; transition: none 0s ease 0s; background: transparent !important;"></textarea>
+                             
+                          </div>
+
+                          <div class="form-group has-feedback">
+                            <p><img src="captcha.php" id="captcha" width="150" height="50" border="1" alt="CAPTCHA">
+                            <a href="#" onclick=" document.getElementById('captcha').src = 'captcha.php?' + Math.random(); document.getElementById('captcha_code').value = ''; return false; ">refresh</a></p>
+                            <p><input type="text" size="6" maxlength="5" name="captcha_code" id="captcha_code" value=""><br>
+                            <small>copy the digits from the image into this box</small></p>
+
+                          </div>
+                          <div class="text-center">
+                              <button type="Submit" class="btn btn-primary btn-lg text-center">Submit Now</button>
+                          </div>
+                      </form>
+                  </div>
+                  
+                  </div> 
+                  <script type="text/javascript">
+  
+                      $("#alumni_save").submit(function(event){
+                          /* stop form from submitting normally */
+                           event.preventDefault();
+                           var values = $(this).serialize();
+                           $.ajax({
+                                url: "insert_alumni_info.php",
+                                type: "post",
+                                data: values,
+                                success: function(msg)
+                                {
+                                  if(msg=="CAPTCHA ERROR")
+                                  {
+                                    alert("Captcha Error: Please fill right captcha information.");
+                                    $("#captcha_code").val("");
+                                    document.getElementById('captcha').src = 'captcha.php?' + Math.random();
+                                  }
+                                  else
+                                  {
+                                    alert("Thanks for submitting your information.");
+                                    $("#name").val("");
+                                    $("#email").val("");
+                                    $("#phone").val("");
+                                    $("#current").val("");
+                                    $("#company").val("");
+                                    $("#captcha_code").val("");
+                                    $("#batch").val("");
+									                  $("#txtCurrent").val("");
+                                    $("#txtPermanent").val("");
+									                  $("#linkedin").val("");
+                                    $("#whatsapp").val("");
+
+                                    document.getElementById('captcha').src = 'captcha.php?' + Math.random();
+                                  }
+                                }//end of succes function
+                            }); //End of .ajax
+                        });
+
+                  </script></div>
+
+            
+            
+       
+    <br><br>
+  </div>
+  <br>
+</div>
+<script>
+
+    alumni_get('reg');
+    
+</script>
+<footer id="site-footer">
+      <div class="container" id="i13">
+        <div class="row">
+          <div class="col-md-5">
+            <a href="index.php"><img src="images/iips_logo2.png" id="logo"></a><br><br><br>
+           <!-- <a href="https://www.facebook.com/expressions12/?ref=br_rs" target="_blank"><span class="fa fa-facebook fa-15x faa-tada animated-hover faa-fast" id="i14"></span></a>
+            <a href="https://twitter.com/iipsdavv" target="_blank"><span class="fa fa-twitter fa-15x faa-tada animated-hover faa-fast icon-color"></span></a>
+            <a href="https://www.linkedin.com/vsearch/f?type=all&keywords=iips+davv&orig=GLHD&rsid=&pageKey=oz-winner&trkInfo=tarId%3A1467819142685&search=Search" target="_blank"><span class="fa fa-linkedin fa-15x faa-tada animated-hover faa-fast icon-color"></span></a>
+            <a href="https://plus.google.com/u/0/110977532784004536112/videos" target="_blank"><span class="fa fa-google-plus fa-15x faa-tada animated-hover faa-fast icon-color"></span></a>
+            <a href="https://www.instagram.com/explore/locations/275894915/" target="_blank"><span class="fa fa-instagram fa-15x faa-tada animated-hover faa-fast icon-color"></span></a>-->
+            <br><br>
+            
+          </div>
+          <div class="col-md-7">
+              <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                  <ul class="nav">
+                    <h4>Admission</h4>
+                    <li><a href="fee_structure.php">Fees Structure</a></li>
+                    <li><a href="https://www.dauniv.ac.in/cuet2025/index.php" target="_blank">Admission CUET -2025 (Programs under DAVV CET)</a></li>
+                    
+                  </ul>
+                </div>
+                          
+                <!--<div class="col-md-3 col-sm-3 col-xs-6"> 
+                  <ul class="nav">
+                    <h4 class="visible-xs visible-sm">RTI</h4>
+                    <h4 class="visible-md visible-lg" style="padding-left:10%">RTI</h4>
+                    <li><a href="press_release.php" >Press Release</a></li>
+                    <li><a href="http://www.dauniv.ac.in/DAVV_Ordinance.php" >Ordinances</a></li>
+                    <li><a href="iqac.php" >IQAC</a></li>
+                    <li><a href="recruitments.php" >Recruitments</a></li>
+                    <li><a href="greviances.php" >Greviances</a></li>
+                  </ul>
+                </div>-->
+
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                  <ul class="nav">
+                    <h4>Miscellaneous</h4>
+                    <li><a href="https://www.dauniv.ac.in/davv-ordinance" target="_blank">Ordinances</a></li>
+                    <!--<li><a href="iqac.php" >IQAC</a></li>-->
+                     <li><a href="grievance.php">Grievance </a></li>
+                    <li><a href="faculty_profile.php">Faculty Profile</a></li>
+                    <li><a href="staff_profile.php">Staff Profile</a></li>
+                    <!--<li><a href="under_construction.php" >Student Verification</a></li>-->
+                    <li><a href="video_channel.php">Video Channel</a></li>
+                    <li><a href="nss.php">NSS</a></li>
+                  </ul>                
+                </div>
+                            
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                  <ul class="nav">
+                    <h4>Downloads</h4>
+                    <li><a href="static/pdf/acc_calendar/AcademicCalenderJulyDec2025.pdf" target="_blank">Academic Calendar</a></li>
+                    <li><a href="syllabus.php">Syllabus</a></li>
+                    <!--<li><a href="results.php" >Results </a></li>
+                    <li><a href="downloads.php" >Faculty CV</a></li>-->
+                  </ul>
+                </div>
+                 <div class="col-md-3 col-sm-3 col-xs-6">
+                  <ul class="nav">
+                    <h4>Digital Library</h4>
+                    <li><a href="https://ugcmoocs.inflibnet.ac.in/" target="_blank">SWAYAM MOOCs</a></li>
+                    <li><a href="https://nptel.ac.in/" target="_blank">NPTEL</a></li>
+                    
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-4">
+				© 2025 International Institute of Professional Studies <a href="https://www.linkedin.com/school/iips-davv/" target="_blank"><img src="/images/LinkedIn_icon_circle.svg.png" width="24px" height="24px"> </a>
+				<a href="https://www.instagram.com/iipsdavvindore/" target="_blank"><img src="images/insta.jpg" width="24px" height="24px"> </a>
+				<a href="https://x.com/iipsdavvindore" target="_blank"><img src="images/x-logo.jpg" width="24px" height="24px"> </a>
+            </div>
+            <div class="col-md-6"></div>
+            <div class="col-md-2 col-xs-6">
+                <a href="developers.php" style="color:#AEAEAE;">About Developers</a>
+            </div>          
+            <div class="col-xs-6 visible-xs">
+              <a class="back-to-top" href=" "><i class="glyphicon glyphicon-menu-up" style="color:white;font-size:160%;float:right;"></i> </a>
+            </div>
+        </div>
+      </div>
+    </footer>
+
+    
+
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+     <script>
+      $(function() {
+        window.prettyPrint && prettyPrint()
+        $(document).on('click', '.yamm .dropdown-menu', function(e) {
+          e.stopPropagation()
+        })
+      });
+     
+    </script>
+    
+    <script>
+                                        $("#searchForm").submit(function(){
+                                                var searchtext ='https://www.google.co.in/webhp?hl=en#hl=en&q=site:iips.edu.in '+ $("#txtSearch").val();
+                                                
+                                                $("#searchForm").attr('action',searchtext);
+                                          }                                        
+                                         );
+                                         $("#searchFormResponsive").submit(function(){
+                                                var searchtext ='https://www.google.co.in/webhp?hl=en#hl=en&q=site:iips.edu.in '+ $("#txtSearchResponsive").val();
+                                                
+                                                $("#searchFormResponsive").attr('action',searchtext);
+                                          }                                        
+                                         );
+      </script>
+    
+     <script src="js/jquery.colorbox.js"></script>
+     <script>
+            $(document).ready(function(){
+                             
+                $(".event_tourista_group2").colorbox({rel:'event_tourista_group2', transition:"fade",width:"75%", height:"75%"});
+                $(".event_maya_group2").colorbox({rel:'event_maya_group2', transition:"fade",width:"75%", height:"75%"});
+                $(".event_ms2_group2").colorbox({rel:'event_ms2_group2', transition:"fade",width:"75%", height:"75%"});
+                $(".mca_ai_group2").colorbox({rel:'mca_ai_group2', transition:"fade",width:"75%", height:"75%"});
+                $(".mtech_ai_group2").colorbox({rel:'mtech_ai_group2', transition:"fade",width:"75%", height:"75%"});
+                $(".placement_media_group2").colorbox({rel:'placement_media_group2', transition:"fade",width:"75%", height:"75%"});
+                $(".event_xpression_group2").colorbox({rel:'event_xpression_group2', transition:"fade",width:"75%", height:"75%"});
+            });
+    </script>   
+    </div> <!--End of id = OuterDiv of header-->  
+  
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button type="button" id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>

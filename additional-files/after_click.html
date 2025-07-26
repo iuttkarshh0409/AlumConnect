@@ -1,0 +1,2217 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="shortcut icon" href="images/favicon.jpg">
+    <title>Alumni | International Institute of Professional Studies, Devi Ahilya Vishwavidhalay</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/newfile.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="yamm/yamm.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/faculty_profile.js"></script>
+  </head>
+  <body>
+    <!--Header Open-->
+    <!--Hide Navbar Open-->
+       <div class="wrapper hidden-xs">
+      <div id="header-style">
+          <div class="container">
+                            <ul class="nav navbar-nav">
+                                <li><a href="https://davv.mponline.gov.in/Portal/Services/DAVV/SIS/Main_Page.aspx" target="_blank">Student</a></li>
+                                <li><a href="#FacultyModal" data-toggle="modal">Faculty &amp; Staff</a></li>
+                                <li><a href="alumni_reg.php">Alumni</a></li>
+                                <li><a href="iips_newsletter.php">IIPS Newsletter</a></li>
+                               
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">     
+                                <li><a href="sitemap.php">Sitemap</a></li>
+                                <li><a href="feedbackForm.php">Feedback</a></li>
+                                <form class="navbar-form navbar-left" id="searchForm" action="https://www.google.co.in/webhp?hl=en#hl=en&amp;q=iips davv " target="_blank">
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" id="txtSearch" class="form-control" placeholder="Search IIPS Web">
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-default" type="submit">
+                                                    <i class="glyphicon glyphicon-search"></i>
+                                                </button>
+                                            </div>
+                                    </div>
+                                </form>
+                              
+                            </ul> 
+          </div><!-- container-->
+      </div><!--header-style-->
+    </div>
+    <!--Hide Navbar Close-->
+
+    <!--Main navbar starts-->
+    <div class="container">
+       
+          <div>
+              <nav class="navbar navbar-default yamm">
+                <div class="container">
+                    <div class="row"> 
+                        <div class="navbar-header">
+                            <h6>
+                              <a href="index.php">
+                                  <img src="images/iips_logo.png" class="img img-responsive iips-logo-css col-lg-6 col-sm-6" style="width:250px;box-shadow: 2px 2px 2px 2px gray;padding:0px ;border-radius:5px; ">
+                              </a>
+                            </h6>
+                            <button type="button" class="navbar-toggle collapsed" id="no-border" data-toggle="collapse" data-target="#navbar-main" aria-expanded="false">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          </button>
+                        </div>
+                          <!-- Collect the nav links, forms, and other content for toggling -->
+                          <!--Visible Content-->
+                        <div class="collapse navbar-collapse" id="navbar-main">
+                                <div class="wrapper visible-xs">
+                                    <div class="container">
+                                        <div class="row">
+                                            <form id="searchFormResponsive" class="navbar-form navbar-left" role="search" target="_blank">
+                                                <div class="form-group">
+                                                    <input type="text" id="txtSearchResponsive" class="form-control" placeholder="Search">
+                                                </div>
+                                            </form> 
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-5 mybutton">
+                                                <a href="sitemap.php">Sitemap</a>
+                                            </div>
+                                            <div class="col-xs-1"></div>
+                                            <div class="col-xs-5 mybutton">
+                                                <a href="feedbackForm.php">Feedback</a>
+                                            </div>
+                                        </div>
+                                    </div>    
+                                </div>
+                            <ul class="nav navbar-nav" id="test">
+								<!-- Home -->
+								<li class="dropdown yamm-fw" id="test_home">
+                                    <a href="index.php" class="dropdown-toggle navbar-underline navbar-two" id="no-underline">Home</a>
+								</li>
+                                <!--About-->
+                                <li class="dropdown yamm-fw" id="test_about">
+                                    <a href="#" class="dropdown-toggle navbar-underline navbar-two" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="no-underline">About<span class="caret"></span></a>
+                                    <ul class="dropdown-menu nav-margin" id="yamm-down-about" role="menu" style="margin:12px">
+                                        <div class="row image2">                
+                                            <div class="col-md-7 col-sm-9 hidden-xs" id="i6">
+                                                <div class="col-md-6 col-sm-6">
+                                                    <img src="images/about/image1.png" class="img-responsive" alt="About IIPS image">
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    The International Institute of Professional Studies, a department of Devi Ahilya Vishwavidyalaya established in the year 1992 is an academic mentor of its kind and an eminently practical institute, recognized by AICTE. With the quality in the content, scope and professionalism of its programs.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 col-sm-3">
+                                                <div class="col-md-6">                 
+                                                    <!--<li id="link-style"><a href="about.php">Overview</a></li>-->
+                                                    <li id="link-style"><a href="about_university.php">About University</a></li>
+                                                    <li id="link-style"><a href="history.php">History</a></li>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <li id="link-style"><a href="infrastructure.php">Infrastructure</a></li>
+                                                    <li id="link-style"><a href="about_iips.php">About IIPS</a></li>
+                                                     <li id="link-style"><a href="annual_report.php">Annual Report IIPS</a></li>
+                                                    <li id="link-style"><a href="reach_us.php">Reach Us</a></li>
+                                                </div>
+                                            </div>
+                                        </div>     
+                                    </ul>
+                                </li>
+
+                                <!--Programs-->
+                                <li class="dropdown yamm-fw" id="test_programs">
+                                    <a href="#" class="dropdown-toggle navbar-underline navbar-two" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false" id="no-underline">Programmes<span class="caret"></span></a>
+                                    <ul class="dropdown-menu nav-margin" id="yamm-down-programmes" style="margin:12px">
+                                        <div class="row image2">
+                                            <div class="col-md-6 col-sm-3 hidden-xs" id="i6">
+                                                <div class="col-md-6 col-sm-6">
+                                                    <img src="images/admission/auditorium.jpg" class="img-responsive" alt="Responsive image">
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    Every year CUET is conducted in the month of May or June for various courses at Graduate and post graduate level. The students from all over India apply to get admission through this exam. In this written exam. the student’s general aptitude, language knowledge and mathematical ability is tested.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-9">
+                                                <div class="col-md-8    ">
+                                                    <div class="panel-group" id="accordion">
+
+                                                    
+                                                        <div class="panel panel-default">
+                                                              <div class="panel-heading">
+                                                                <h4 class="panel-title">
+                                                                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                                                  Integrated Programmes</a>
+                                                                </h4>
+                                                              </div>
+                                                              <div id="collapse3" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                  <div class="nav nav-stacked" role="tablist">
+                                                                        <li><a href="p_mtech-cs.php" class="menuLi" style="padding:0px">M.Tech.(CS)(5 Yrs.) [New Programme]</a></li>
+                                                                      <li><a href="p_mca.php" class="menuLi" style="padding:0px">MCA(5 Yrs.)</a></li>
+                                                                      <li><a href="p_mtech.php" class="menuLi" style="padding:0px">M.Tech.(IT)(5 Yrs.)</a></li>
+                                                                      <li><a href="p_mbams5.php" class="menuLi" style="padding:0px">MBA(MS)(5 Yrs.)</a></li>            
+                                                                      <li><a href="p_mbat5.php" class="menuLi" style="padding:0px">MBA(Tourism)(5 Yrs.)</a></li>
+                                                                  </div>
+
+                                                                </div>
+                                                              </div>
+                                                        </div>
+
+                                                        <div class="panel panel-default">
+                                                              <div class="panel-heading">
+                                                                <h4 class="panel-title">
+                                                                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                                                  UG Programmes</a>
+                                                                </h4>
+                                                              </div>
+                                                              <div id="collapse1" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                  <div class="nav nav-stacked" role="tablist">
+                                                         
+                                                                      <li><a href="p_bcom.php" class="menuLi" style="padding:0px">B.Com.(3 Yrs.)/B.Com.(Hons.)(4 Yrs.)</a></li>
+                                                                      
+                                                                  </div>
+
+                                                                </div>
+                                                              </div>
+                                                        </div>
+
+                                                        <div class="panel panel-default">
+                                                              <div class="panel-heading">
+                                                                <h4 class="panel-title">
+                                                                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                                                  PG Programmes</a>
+                                                                </h4>
+                                                              </div>
+                                                              <div id="collapse2" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                  <div class="nav nav-stacked" role="tablist">
+                                                         
+                                                                      <li><a href="p_mbams2.php" class="menuLi" style="padding:0px">MBA(MS)(2 Yrs.)</a></li>
+                                                                      <li><a href="p_mbata2.php" class="menuLi" style="padding:0px">MBA(TA)(2 Yrs.)</a></li>
+                                                                      <li><a href="p_mbaapr2.php" class="menuLi" style="padding:0px">MBA(APR)(2 Yrs.)</a></li>
+                                                                      <li><a href="p_mbaent2.php" class="menuLi" style="padding:0px">MBA(Entrepreneurship)(2 Yrs.)</a></li>
+                                                                  </div>
+
+                                                                </div>
+                                                              </div>
+                                                        </div>
+
+                                                        <div class="panel panel-default">
+                                                              <div class="panel-heading">
+                                                                <h4 class="panel-title">
+                                                                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                                                                  Doctoral Programmes</a>
+                                                                </h4>
+                                                              </div>
+                                                              <div id="collapse4" class="panel-collapse collapse">
+                                                                <div class="panel-body">
+                                                                  <div class="nav nav-stacked" role="tablist">
+                                                         
+                                                                      <li><a href="https://www.dauniv.ac.in/det2024" target="_blank" class="menuLi" style="padding:0px">Ph.D. in Computer Science</a></li>
+                                                                      <li><a href="https://www.dauniv.ac.in/det2024" target="_blank" class="menuLi" style="padding:0px">Ph.D. in Management</a></li>
+                                                                      
+                                                                  </div>
+
+                                                                </div>
+                                                              </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                                    
+                                                <div class="col-md-4"> 
+                                                    <!--<li id="link-style"><a href="courses.php">Courses</a></li>-->
+                                                    <li id="link-style"><a href="fee_structure.php">Fees Structure</a></li>
+                                                    <li id="link-style"><a href="how_to_apply.php">How to Apply</a></li>
+                                                </div>
+                                                
+                                            </div>
+                                        </div><!--container-->        
+                                    </ul>
+                                </li>
+                                
+
+                                <!--Academics-->
+                                <li class="dropdown yamm-fw" id="test_academics">
+                                    <a href="#" class="dropdown-toggle navbar-underline" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="no-underline">Academics<span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu nav-margin" id="yamm-down-academics" style="margin:12px">
+                                        <div class="row image2">
+                                            <div class="col-md-7 col-sm-8 hidden-xs" id="i6">
+                                                <div class="col-md-6 col-sm-6">
+                                                    <img src="images/academics/012.jpg" class="img img-responsive" alt="Responsive image">
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    The institute provides ample opportunities to students with a rigorous and challenging curriculum with flexibility to allow students to tailor their education to meet their professional and personal interests and goals.      
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 col-sm-4">
+                                                <div class="col-md-6">
+                                                    <!--<li id="link-style"><a href="academics.php">Overview</a></li>-->
+                                                    <li id="link-style"><a href="syllabus.php">Syllabus</a></li>
+                                                    <li id="link-style"><a href="static/pdf/acc_calendar/AcademicCalenderJulyDec2025.pdf" target="_blank">Academic Calendar</a></li>
+                                                  <!--  <li id="link-style"><a href="results.php">Results</a></li> -->
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <!-- <li id="link-style"><a href="news_and_announcements.php">News &amp; Announcements</a></li> -->
+                                                    <li id="link-style"><a href="faculty_profile.php">Faculty Profile</a></li>
+                                                    <li id="link-style"><a href="staff_profile.php">Staff Profile</a></li>
+                                                     <li id="link-style"><a href="feedback.php">Feedback Report</a></li>
+                                                      <li id="link-style"><a href="academic_audit.php">Academic Audit Report</a></li>
+                                                </div>
+                                            </div>
+                                        </div><!--container-->        
+                                    </ul>  
+                                </li>
+
+                                <!--Research -->
+                                <li class="dropdown yamm-fw" id="test-research">
+                                    <a href="#" class="dropdown-toggle navbar-underline navbar-two" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="no-underline">Research<span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu nav-margin" id="yamm-down-research" style="margin:12px">
+                                        <div class="row image2">      
+                                            <div class="col-md-7 col-sm-9 hidden-xs" id="i6">
+                                                <div class="col-md-6 col-sm-6">
+                                                    <img src="images/research/research_.png" class="img img-responsive" alt="Responsive image">
+                                                </div>
+                                                <div class="col-md-6 col-sm-6">
+                                                    Research is a process to discover new knowledge. The development and research center allow students to learn standards that are currently adapted by industry. Mentors also guide students to publish new research papers.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-5 col-sm-3">
+                                                <div class="col-md-6">
+                                                    <!--<li id="link-style"><a href="research.php">Overview</a></li>-->
+													<li id="link-style"><a href="publication.php">Publication</a></li>
+                                                    <li id="link-style"><a href="research_cell.php">Research Center</a></li>
+                                                    <li id="link-style"><a href="development_center.php">Development Center</a></li>
+													<!--<li id="link-style"><a href="consultancy.php">Consultancy</a></li>-->
+                                                </div>
+                                                <div class="col-md-6">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>        
+                                    </ul>
+                                </li>
+								<!-- Placement -->
+								<li class="dropdown yamm-fw" id="test_placement">
+                                    <a href="placement.php" class="dropdown-toggle navbar-underline navbar-two" id="no-underline">Placements</a>
+								</li>
+                                <!--Campus Life-->
+                                <li class="dropdown yamm-fw" id="campus_life">
+                                    <a href="#" class="dropdown-toggle navbar-underline navbar-two" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="no-underline">Student Zone<span class="caret"></span>
+                                    </a>
+            	                     <ul class="dropdown-menu nav-margin" id="yamm-down-campus" style="margin:12px">
+                                      <div class="row image2">
+                                          <div class="col-md-7 col-sm-9 hidden-xs" id="i6">
+                                              <div class="col-md-6 col-sm-6">
+                                                  <img src="images/campuslife/campus.jpg" class="img-responsive" alt="Responsive image">
+                                              </div>
+                                              <div class="col-md-6 col-sm-6">
+                                                  Other than studies students also enjoy their college life by participating in different events.                                         </div>
+                                          </div>
+                                          <div class="col-md-5 col-sm-3">
+                                              <div class="col-md-6">
+                                                  <!--<li id="link-style"><a href="campus_life.php">Overview</a></li>-->
+                                                  <li id="link-style"><a href="event.php">Events </a></li>
+                                                  <li id="link-style"><a href="clubs.php">Students Club </a></li>
+                                                  <li id="link-style"><a href="scholarship.php">Scholarship </a></li>
+												  <li id="link-style"><a href="/sampoorna/Sampoorna.php">Sampoorna Club </a></li>
+                                                  <!--<li id="link-style"><a href="placement.php">Placements</a></li>-->
+                                              </div>
+                                              <div class="col-md-6">
+                                                  <li id="link-style"><a href="video_channel.php">Video Channels</a></li>
+                                                  <li id="link-style"><a href="gallery.php">Gallery</a></li>
+                                                  <li id="link-style"><a href="nss.php">NSS</a></li>
+                                              </div>
+                                          </div>
+                                      </div>        
+                                    </ul>
+                                </li>
+                                                            </ul>
+
+                            <div class="wrapper visible-xs">
+                              <h3 id="i38">Information for...</h3>
+                              <ul class="nav navbar-nav">
+                                  <li><a href="https://davv.mponline.gov.in/Portal/Services/DAVV/SIS/Main_Page.aspx" target="_blank">Students</a></li>
+                                  <li><a href="#FacultyModal" data-toggle="modal">Faculty &amp; Staff</a></li>
+                                  <li><a href="alumni_reg.php">Alumni</a></li>
+                                  <li><a href="iips_newsletter.php" target="_blank">IIPS Newsletter</a></li>
+                              </ul>
+                            </div>
+                        </div>
+                    </div><!--Visible Content-->
+                </div>
+              </nav>
+          </div><!-- container-fluid -->
+   
+    </div><!-- row end-->
+   <!-- </div>--><!--Container Close--><!--Main navbar close-->
+	<br>
+   <div id="outerDiv">
+    <!-- modal -->
+    <div class="modal fade" id="FacultyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Sign-In</h4>
+                </div>
+                <div class="modal-body ">
+                    <form class="form-horizontal" role="form" action="/alumni_reg.php" method="post" id="signUp">
+                    <div class="form-group">
+                        <label for="inputEmail1" class="col-lg-3 control-label">User ID</label>
+                        <div class="col-lg-8">
+                            <input type="text" required="required" class="form-control" placeholder="User ID" name="username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword1" class="col-lg-3 control-label">Password</label>
+                        <div class="col-lg-8">
+                            <input type="password" class="form-control" required="required" name="password" placeholder="Password" id="password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-lg-offset-4 col-lg-8">
+                            <button type="submit" name="signIn1" class="btn btn-large btn-primary">OK</button>
+                            <button type="button" class="btn btn-large btn-primary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+<div class="container">
+  <div class="row">
+     <div class="col-md-3" id="sidebar">
+      <ul class="nav nav-stacked" role="tablist">
+        <br><br>
+        <li role="presentation" id="colm" class="active"><a href="#" onclick="alumni_get('reg')"><span class="fa fa-hand-o-right"></span>&nbsp;Alumni Registration</a></li>
+        <li role="presentation" id="colm"><a href="#" onclick="alumni_get('list')"><span class="fa fa-hand-o-right"></span>&nbsp;Alumni List</a></li>
+        <br>
+      </ul>
+    </div>
+    <div class="col-md-9" id="detail">        <style type="text/css">
+        	.facultyHover:hover{
+        		background-color: rgba(125,125,125,0.1);
+        		border-radius:10px ;
+        	}
+
+</style>
+<br><br>
+<h3 class="text-center"><b>Alumni List </b> </h3> 
+
+
+            <div class="panel-group " id="accordion">
+              <div class="panel panel-default paperDiv">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">
+                       MCA (6 Years)                    </a>
+                  </h4>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse">
+                  <div class="panel-body">
+                  
+                  <table class="table table-hover">
+                                        <thead>
+                        <tr>
+                          <th>Alumni Name</th>
+                          <th>Current Designation</th>
+                          <th>Current Company</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                                                <tr>
+                          <td>
+                            Rajeev Shukla                          </td>
+                          <td>
+                            Sr. Director                           </td>
+                          <td>
+                            Oracle Corporation                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Harsh Billore                          </td>
+                          <td>
+                            Technology consultant                          </td>
+                          <td>
+                            Researcher in AI innovations and Strategies in Rennes school of business France                           </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Divya Oberoi                          </td>
+                          <td>
+                            Application Development Associate                          </td>
+                          <td>
+                            Accenture                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Satyam Saxena                          </td>
+                          <td>
+                            IT Architect                          </td>
+                          <td>
+                            Coforge Technologies                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Nitin Rajora                          </td>
+                          <td>
+                            Manager                          </td>
+                          <td>
+                            Capgemini                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            AASHISH MALVIYA                          </td>
+                          <td>
+                            Firmware Engineer 2                          </td>
+                          <td>
+                            DELL International                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Ruchi Jadon                          </td>
+                          <td>
+                            Software Engineer II                          </td>
+                          <td>
+                            FICO                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Saksham Yadav                          </td>
+                          <td>
+                            Azure Support Engineer                          </td>
+                          <td>
+                            Microsoft                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Sakshi Gaud                          </td>
+                          <td>
+                            Solution Integration Consultant I                          </td>
+                          <td>
+                            FICO                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Suphala Patwardhan                          </td>
+                          <td>
+                            Senior Project Engineer                          </td>
+                          <td>
+                            Wipro Technologies                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Vikas chouhan                          </td>
+                          <td>
+                            Full Stack Developer                          </td>
+                          <td>
+                            Magenta Connect                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Deepak Chaurasia                          </td>
+                          <td>
+                            Junior Developer                          </td>
+                          <td>
+                            Infobeans                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Harneet Kaur Khanuja                           </td>
+                          <td>
+                            Software Developer                           </td>
+                          <td>
+                            FICO                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Harsh Dube                          </td>
+                          <td>
+                            Software developer                           </td>
+                          <td>
+                            Accenture                           </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Madhu Patel                          </td>
+                          <td>
+                            software devloper                          </td>
+                          <td>
+                            Techinfini ,indore                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            MEGHNA NIVSARKAR                          </td>
+                          <td>
+                            Analyst                          </td>
+                          <td>
+                            Citigroup                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            RITIKA AGRAWAL                           </td>
+                          <td>
+                            Application development associate                          </td>
+                          <td>
+                            Accenture                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Ruchi Vaishnav                          </td>
+                          <td>
+                            Associate software engineer                           </td>
+                          <td>
+                            Accenture                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Aman Jain                          </td>
+                          <td>
+                            Software developer                           </td>
+                          <td>
+                            Accenture                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Deepika Sarode                          </td>
+                          <td>
+                            Software developer                          </td>
+                          <td>
+                            Docusoft Limited                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Deependra singh tomar                          </td>
+                          <td>
+                            Junior Software associate                          </td>
+                          <td>
+                            Accenture                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Divya katlana                          </td>
+                          <td>
+                            Software developer                          </td>
+                          <td>
+                            Accenture                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Harsh dube                          </td>
+                          <td>
+                            Software developer                          </td>
+                          <td>
+                            Accenture                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Harshita patidar                          </td>
+                          <td>
+                            Devloper                          </td>
+                          <td>
+                            Worldpay                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Hridaya Bakshi                          </td>
+                          <td>
+                            Product analyst                          </td>
+                          <td>
+                            Walkover web solutions                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Maharsh soni                          </td>
+                          <td>
+                            Associate application developer                          </td>
+                          <td>
+                            Accenture                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Mustan Ali                          </td>
+                          <td>
+                            Junior software associate                          </td>
+                          <td>
+                            ACCENTURE                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Noopur Joshi                          </td>
+                          <td>
+                            Software developer                          </td>
+                          <td>
+                            MPONLINE                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Shubham Sharma                          </td>
+                          <td>
+                            Software engineer                          </td>
+                          <td>
+                            Caspar.ai                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Gaurab Banerjee                          </td>
+                          <td>
+                            Technology Lead                          </td>
+                          <td>
+                            Infosys Ltd                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Pramod Bhargava                          </td>
+                          <td>
+                            Lead Engineer                          </td>
+                          <td>
+                            Kagami                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            SUMIT KUMAR SINGH                          </td>
+                          <td>
+                            TECHNOLOGY ANALYST                          </td>
+                          <td>
+                            INFOSYS LTD                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Anchal Nema                          </td>
+                          <td>
+                            Product Manager                          </td>
+                          <td>
+                            Enzigma Software private limited                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Kamal Namdeo                          </td>
+                          <td>
+                            Senior Software Engineer                          </td>
+                          <td>
+                            MessageBird, Berlin                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Sunil Chouhan                          </td>
+                          <td>
+                            Sr. Software Engineer                          </td>
+                          <td>
+                            Innodata India Pvt Ltd                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Ram Narayanan Sastry                          </td>
+                          <td>
+                            Marketing Specialist                          </td>
+                          <td>
+                            Canon Medical Systems Corporation                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Pranjal Srivastava                          </td>
+                          <td>
+                            Delivery Manager                          </td>
+                          <td>
+                            Capgemini                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Aakanksha Dhamarikar                          </td>
+                          <td>
+                            ASE                          </td>
+                          <td>
+                            Accenture                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Nidhi Solanki                          </td>
+                          <td>
+                            Application Development Associate                          </td>
+                          <td>
+                            Accenture                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Noopur Joshi                          </td>
+                          <td>
+                            software developer                          </td>
+                          <td>
+                            Mponline Limited                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Paridhi Neema                          </td>
+                          <td>
+                            Associate software engineer                          </td>
+                          <td>
+                            Accenture                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Pramod Bhargava                          </td>
+                          <td>
+                            Lead Engineer                          </td>
+                          <td>
+                            KagamiERP                          </td>
+                          </tr>
+
+                                            </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div><!--End of Panel group-->
+
+
+          
+            <div class="panel-group " id="accordion">
+              <div class="panel panel-default paperDiv">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">
+                       MBA(MS)(5 Years)                    </a>
+                  </h4>
+                </div>
+                <div id="collapse11" class="panel-collapse collapse">
+                  <div class="panel-body">
+                  
+                  <table class="table table-hover">
+                                        <thead>
+                        <tr>
+                          <th>Alumni Name</th>
+                          <th>Current Designation</th>
+                          <th>Current Company</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                                                <tr>
+                          <td>
+                            Nakul joshi                          </td>
+                          <td>
+                            Properitor                          </td>
+                          <td>
+                            Manglam managment and services                           </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Ketul Sahu                          </td>
+                          <td>
+                            Senior Process Manager                          </td>
+                          <td>
+                             Morgan Stanley                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Prashant Upadhyay                          </td>
+                          <td>
+                            Relationship Manager                          </td>
+                          <td>
+                            SBI                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            APOORV CHOUHAN                          </td>
+                          <td>
+                            MANAGER                          </td>
+                          <td>
+                            BANK OF INDIA                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            DIVYA CHAUHAN                          </td>
+                          <td>
+                            MANAGER                          </td>
+                          <td>
+                            BANK OF INDIA                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Chandan Arora                          </td>
+                          <td>
+                            Branch Manager                          </td>
+                          <td>
+                            Home First Finance Company India Limited                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Akshay Arjune                          </td>
+                          <td>
+                            Senior HR Associate                          </td>
+                          <td>
+                            Aster DM Healthcare, Doha, Qatar                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Mohit Mehroliya                          </td>
+                          <td>
+                            HR                          </td>
+                          <td>
+                            Walkover                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Himanshu Patel                          </td>
+                          <td>
+                            Senior Associate                          </td>
+                          <td>
+                            SBI Life Insurance                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Mahima Hardia                          </td>
+                          <td>
+                            Consumer safety consultant                          </td>
+                          <td>
+                            HPS labs design                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Naina Rai                          </td>
+                          <td>
+                            M.D.                          </td>
+                          <td>
+                            The Shivani Hotel                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Pankhuri Rasal                          </td>
+                          <td>
+                            Tax Consultant                          </td>
+                          <td>
+                            Deloitte                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Tanvi Dixit                          </td>
+                          <td>
+                            VCS                          </td>
+                          <td>
+                            Amazon                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Suprada Jain                          </td>
+                          <td>
+                            Sr Analyst                          </td>
+                          <td>
+                            Amobee USA                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Ankit Jain                          </td>
+                          <td>
+                            Senior Analyst                          </td>
+                          <td>
+                            D. E. Shaw &amp; Co.                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Dr. Sarfaraz Ansari                          </td>
+                          <td>
+                            Assistant Professor - Finance                          </td>
+                          <td>
+                            Prestige Institute of Management and Research Indore                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Nidhi Agrawal                          </td>
+                          <td>
+                            Manager                          </td>
+                          <td>
+                            D. E. Shaw &amp; Co.                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            MANU JAIN                          </td>
+                          <td>
+                            MANAGER                          </td>
+                          <td>
+                            YES BANK                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Shrishti                          </td>
+                          <td>
+                            Manager                          </td>
+                          <td>
+                            SBI LIFE INSURANCE CO LTD                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Anjali Patel                          </td>
+                          <td>
+                            Deputy Manager                           </td>
+                          <td>
+                            Steel Authority Of India Limited                           </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            ANKUR PANDEY                          </td>
+                          <td>
+                            Academic Associate                          </td>
+                          <td>
+                            Indian Institute of Management Indore                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Banwari Lal Yadav                           </td>
+                          <td>
+                            Branch Manager (MMGS II)                          </td>
+                          <td>
+                            Bank of Baroda                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Pranjali Gaikwad                          </td>
+                          <td>
+                            Markrting                           </td>
+                          <td>
+                            Cadbury                           </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Akshay Choudhary                          </td>
+                          <td>
+                            Relationship Manager                          </td>
+                          <td>
+                            Home first finance company India limited                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Sakshi Gupta                          </td>
+                          <td>
+                            Tax consultant-1                          </td>
+                          <td>
+                            Delloite                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Aditya Hora                          </td>
+                          <td>
+                            Tax Senior                          </td>
+                          <td>
+                            Ernst &amp; Young                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Dhruvi Manghnani                          </td>
+                          <td>
+                            Tax Consultant                          </td>
+                          <td>
+                            Deloitte                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Diksha kurmi                          </td>
+                          <td>
+                            Business Development Manager                          </td>
+                          <td>
+                            Byjus-The learning App                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            KANGAN MEHRA                          </td>
+                          <td>
+                            US TAX CONSULTANT I                          </td>
+                          <td>
+                            DELOITTE                           </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Rahul Thadani                          </td>
+                          <td>
+                            Tax consultant                           </td>
+                          <td>
+                            Deloitte                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Shantanu Shitut                          </td>
+                          <td>
+                            Marketing &amp; Sales Trainee                          </td>
+                          <td>
+                            Bajaj Finserv                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Shivani jaiswal                          </td>
+                          <td>
+                            Manager                          </td>
+                          <td>
+                            Madan shree bulk carrier Pvt. Ltd.                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Shruti pawade                          </td>
+                          <td>
+                            Virtual customer support assoicate                          </td>
+                          <td>
+                            Amazon                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Yagyaparna Arora                          </td>
+                          <td>
+                            Tax consultant                           </td>
+                          <td>
+                            Deloitte                           </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Aarju badjatya                          </td>
+                          <td>
+                            Data Researcher 1                           </td>
+                          <td>
+                            S and p global                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Ankit Chourasia                          </td>
+                          <td>
+                            Territory Sales Executive                          </td>
+                          <td>
+                            Ultratech Cement                          </td>
+                          </tr>
+
+                                            </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div><!--End of Panel group-->
+
+
+          
+            <div class="panel-group " id="accordion">
+              <div class="panel panel-default paperDiv">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">
+                       MBA(Toursim)                    </a>
+                  </h4>
+                </div>
+                <div id="collapse12" class="panel-collapse collapse">
+                  <div class="panel-body">
+                  
+                  <table class="table table-hover">
+                                        <thead>
+                        <tr>
+                          <th>Alumni Name</th>
+                          <th>Current Designation</th>
+                          <th>Current Company</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                                                <tr>
+                          <td>
+                            Yadvendra singh                          </td>
+                          <td>
+                            Director                           </td>
+                          <td>
+                            TravelPro                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Aditi Sarvate                          </td>
+                          <td>
+                            Manager                          </td>
+                          <td>
+                            Avni Tours &amp; Travels                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Divyanshu Goyal                          </td>
+                          <td>
+                            CSA                          </td>
+                          <td>
+                            Jetairways india ltd                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Basant Singh                          </td>
+                          <td>
+                            Manager                           </td>
+                          <td>
+                            MP Tourism                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Susmit Vyas                          </td>
+                          <td>
+                            sr sales executive - business travel                           </td>
+                          <td>
+                            Nimble Tours Pvt. Ltd.                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Ayushi garg                          </td>
+                          <td>
+                            Executive                           </td>
+                          <td>
+                            Pricebeat travels                          </td>
+                          </tr>
+
+                                            </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div><!--End of Panel group-->
+
+
+          
+            <div class="panel-group " id="accordion">
+              <div class="panel panel-default paperDiv">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse13">
+                       MBA(APR)                    </a>
+                  </h4>
+                </div>
+                <div id="collapse13" class="panel-collapse collapse">
+                  <div class="panel-body">
+                  
+                  <table class="table table-hover">
+                                        <thead>
+                        <tr>
+                          <th>Alumni Name</th>
+                          <th>Current Designation</th>
+                          <th>Current Company</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                                                <tr>
+                          <td>
+                            Anshu Bhati                          </td>
+                          <td>
+                            Sr Lecturer                          </td>
+                          <td>
+                            International Institute of professional studies                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Harshita pandey                          </td>
+                          <td>
+                            Social media executive                          </td>
+                          <td>
+                            WittyFeed                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Sakshi Ingole                          </td>
+                          <td>
+                            Senior Administrator                          </td>
+                          <td>
+                            Wipro                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Pooja Gorse                          </td>
+                          <td>
+                            PA TO PRINCIPAL                          </td>
+                          <td>
+                            THE MILLENNIUM SCHOOL, INDORE                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Sanjeev Thakur                          </td>
+                          <td>
+                            Director-Sales &amp; Marketing                          </td>
+                          <td>
+                            OVT India Pvt ltd                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Dr Shreekala Padmanabhan                          </td>
+                          <td>
+                            Associate Professor                           </td>
+                          <td>
+                            Dr D Y PATIL SCHOOL OF MANAGEMENT, LOHEGAON, PUNE                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Poorva Patel                          </td>
+                          <td>
+                            Manager, Brand Design                          </td>
+                          <td>
+                            General Mills India Pvt Ltd                          </td>
+                          </tr>
+
+                                            </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div><!--End of Panel group-->
+
+
+          
+            <div class="panel-group " id="accordion">
+              <div class="panel panel-default paperDiv">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse14">
+                       MBA(MS)(2 Years)                    </a>
+                  </h4>
+                </div>
+                <div id="collapse14" class="panel-collapse collapse">
+                  <div class="panel-body">
+                  
+                  <table class="table table-hover">
+                                        <thead>
+                        <tr>
+                          <th>Alumni Name</th>
+                          <th>Current Designation</th>
+                          <th>Current Company</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                                                <tr>
+                          <td>
+                            Maneesh Bhati                          </td>
+                          <td>
+                            Director                          </td>
+                          <td>
+                            Uniworks Business Solutions Private Limited                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Sumit Srivastava                           </td>
+                          <td>
+                            Area Manager                           </td>
+                          <td>
+                            LIC Mutual Fund                           </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Suresh Lalwani                           </td>
+                          <td>
+                            Executive Vice President                           </td>
+                          <td>
+                            Yes bank Ltd                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Vishal Pandole                          </td>
+                          <td>
+                            Vice President &amp; General Manager                          </td>
+                          <td>
+                            Next Biometrics AS                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Namrata Maheshwari                           </td>
+                          <td>
+                            Associate analyst                          </td>
+                          <td>
+                            Moody's investor services                           </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            veerendra kumar verma                          </td>
+                          <td>
+                            Manager                          </td>
+                          <td>
+                            Mantralaya, Vallabh bhawan bhopal                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Radhika Udasi                          </td>
+                          <td>
+                            Assistant Manager                          </td>
+                          <td>
+                            Axis bank                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Saloni Gupta                          </td>
+                          <td>
+                            Data researcher 1                          </td>
+                          <td>
+                            S&amp;P global                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Prinjal Rathore                           </td>
+                          <td>
+                            HR Associate                           </td>
+                          <td>
+                            Mahindra Rural Housing Finance ltd                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Nikita Navlani                          </td>
+                          <td>
+                            Tax Consultant                          </td>
+                          <td>
+                            Deloitte                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Nikhil Patil                          </td>
+                          <td>
+                            Data researcher                          </td>
+                          <td>
+                            S&amp;P global                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Bhavika Bilala                          </td>
+                          <td>
+                            Financial Analyst                          </td>
+                          <td>
+                            Infocrest finweb solutions                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Deepak Pandey                          </td>
+                          <td>
+                            Tax consultant 1                          </td>
+                          <td>
+                            Deloitte                           </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Abhishek kumar kahar                          </td>
+                          <td>
+                            Patwari                          </td>
+                          <td>
+                            Revenue Department MP                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Dhanu Kashyap                          </td>
+                          <td>
+                            Graphic designer                          </td>
+                          <td>
+                            DK Designers                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Meenal Sharma                          </td>
+                          <td>
+                            Personal Banker                          </td>
+                          <td>
+                            HDFC bank                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Noopur Choukade                          </td>
+                          <td>
+                            E-Relationship Manager                          </td>
+                          <td>
+                            ICICI Bank                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Siddharth arora                          </td>
+                          <td>
+                            Senior sales executive-corporate sales                          </td>
+                          <td>
+                            Naukri.com                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Siddharth Bhandari                          </td>
+                          <td>
+                            Data Analyst                          </td>
+                          <td>
+                            Deloitte                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Anushka Singh                          </td>
+                          <td>
+                            Tax consultant                           </td>
+                          <td>
+                            Deloitte                           </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Surbhi Vachhani                          </td>
+                          <td>
+                            Knowledge Analyst                          </td>
+                          <td>
+                            Deloitte                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Yunus Mun                          </td>
+                          <td>
+                            Tax consultant                          </td>
+                          <td>
+                            Deloitte                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Anjali Madhwani                          </td>
+                          <td>
+                            Asst. Professor                          </td>
+                          <td>
+                            Prestige Institute of Management Dewas                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Brijesh Shivhare                          </td>
+                          <td>
+                            Senior Relationship Manager                          </td>
+                          <td>
+                            ICICI Securities                           </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Priyansh Rodwal                          </td>
+                          <td>
+                            Data Researcher                          </td>
+                          <td>
+                            S&amp;P Global                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Siddharth Jain                          </td>
+                          <td>
+                            Equity advisor                          </td>
+                          <td>
+                            ICICI Securities Ltd                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Pankaj Sharma                          </td>
+                          <td>
+                            Founder Director                          </td>
+                          <td>
+                            Mahaamana Foundation                          </td>
+                          </tr>
+
+                                            </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div><!--End of Panel group-->
+
+
+          
+            <div class="panel-group " id="accordion">
+              <div class="panel panel-default paperDiv">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse15">
+                       BCA                    </a>
+                  </h4>
+                </div>
+                <div id="collapse15" class="panel-collapse collapse">
+                  <div class="panel-body">
+                  
+                  <table class="table table-hover">
+                                        <thead>
+                        <tr>
+                          <th>Alumni Name</th>
+                          <th>Current Designation</th>
+                          <th>Current Company</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                                                <tr>
+                          <td>
+                            Diksha Verma                          </td>
+                          <td>
+                            Software Developer                          </td>
+                          <td>
+                            Amdocs                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Sayli Galande                          </td>
+                          <td>
+                            Software developer                          </td>
+                          <td>
+                            Amdocs                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Aashish Upadhyay                          </td>
+                          <td>
+                            Product Manager                          </td>
+                          <td>
+                            Flow Traders BV, Amsterdam                          </td>
+                          </tr>
+
+                                            </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div><!--End of Panel group-->
+
+
+          
+            <div class="panel-group " id="accordion">
+              <div class="panel panel-default paperDiv">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse16">
+                       MMS(5 Years)                    </a>
+                  </h4>
+                </div>
+                <div id="collapse16" class="panel-collapse collapse">
+                  <div class="panel-body">
+                  
+                  <table class="table table-hover">
+                                        <thead>
+                        <tr>
+                          <th>Alumni Name</th>
+                          <th>Current Designation</th>
+                          <th>Current Company</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                                                <tr>
+                          <td>
+                            Santosh Gupta                          </td>
+                          <td>
+                            Lead Equity Analyst and Advisory Co-ordinator                          </td>
+                          <td>
+                            Drewry Maritime Equity Research                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Shiladitya Verma                          </td>
+                          <td>
+                            Faculty- Business                          </td>
+                          <td>
+                            Higher Colleges of Technology, Fujairah, United Arab Emirates                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            AKHILESH TAPARIA                          </td>
+                          <td>
+                            CEO                          </td>
+                          <td>
+                            GO GREEN TEXTILES INDIA                          </td>
+                          </tr>
+
+                                            </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div><!--End of Panel group-->
+
+
+          
+            <div class="panel-group " id="accordion">
+              <div class="panel panel-default paperDiv">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse17">
+                       M.Tech(IT)(5½ Years)                    </a>
+                  </h4>
+                </div>
+                <div id="collapse17" class="panel-collapse collapse">
+                  <div class="panel-body">
+                  
+                  <table class="table table-hover">
+                                        <thead>
+                        <tr>
+                          <th>Alumni Name</th>
+                          <th>Current Designation</th>
+                          <th>Current Company</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                                                <tr>
+                          <td>
+                            Akanksha Singh                          </td>
+                          <td>
+                            VSE                          </td>
+                          <td>
+                            Aegis                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Harshit Mahajan                          </td>
+                          <td>
+                            DevOps engineer                          </td>
+                          <td>
+                            INFRACLOUD TECHNOLOGIES                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Samiksha Rathore                           </td>
+                          <td>
+                            Indore                          </td>
+                          <td>
+                            Infosys                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Anuradha Kanesh                          </td>
+                          <td>
+                            Software engineer                          </td>
+                          <td>
+                            Tcs                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Ashwini Nakaswal                          </td>
+                          <td>
+                            Business Analyst                          </td>
+                          <td>
+                            NorthOut Solutions(ECI Company)                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Mayank Jain                          </td>
+                          <td>
+                            Associate Systems engineer AI modeling                          </td>
+                          <td>
+                            Constems-AI systems Pvt Ltd                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Rupesh Kumar Verma                          </td>
+                          <td>
+                            Senior System Engineer                          </td>
+                          <td>
+                            Infosys Limited                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Kajol Maheshwari                          </td>
+                          <td>
+                            Software Engineer                          </td>
+                          <td>
+                            Truecaller                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Divyanshu Malviya                          </td>
+                          <td>
+                            ASE                          </td>
+                          <td>
+                            TCS                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Monika Lele                          </td>
+                          <td>
+                            software engineer 1                          </td>
+                          <td>
+                            FIS                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Parth Sohani                          </td>
+                          <td>
+                            Software Engineer I                          </td>
+                          <td>
+                            Fair Isaac Corporation                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Pranav Vaidya                          </td>
+                          <td>
+                            Junior software developer                          </td>
+                          <td>
+                            Newput Infotech Pvt. Ltd.                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Sakshi Nagar                          </td>
+                          <td>
+                            SDET                          </td>
+                          <td>
+                            TestVagrant Technologies                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Sapna Suryavanshi                           </td>
+                          <td>
+                            Software Developer                          </td>
+                          <td>
+                            Innoeye Technologies                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Shishir Trivedi                          </td>
+                          <td>
+                            Teaching Associate                          </td>
+                          <td>
+                            Goa Institute of Management                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Vidhya parmar                          </td>
+                          <td>
+                            System-Engineer                          </td>
+                          <td>
+                            TCS                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Radhika Jain                           </td>
+                          <td>
+                            Product Manager                           </td>
+                          <td>
+                            CredR                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Sakshi Bhalerao                          </td>
+                          <td>
+                            System Engineer                          </td>
+                          <td>
+                            Infosys                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Shivani Kaithwas                          </td>
+                          <td>
+                            Software Engineer                          </td>
+                          <td>
+                            Cognam Technology Pvt. Limited                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Somya Agrawal                           </td>
+                          <td>
+                            Systems engineer                           </td>
+                          <td>
+                            Infosys                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Sqn Ldr Vivek Sharma                          </td>
+                          <td>
+                            SENIOR TECHNICAL OFFICER IN INDIAN AIR FORCE                          </td>
+                          <td>
+                            INDIAN AIR FORCE                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Deepak Pandey                          </td>
+                          <td>
+                            UI developer                          </td>
+                          <td>
+                            Cognam technologies                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Palak Chhajed                          </td>
+                          <td>
+                            Software Engineer                          </td>
+                          <td>
+                            Worldpay                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Surbhi                          </td>
+                          <td>
+                            Engineer II                          </td>
+                          <td>
+                            FICO                          </td>
+                          </tr>
+
+                                            </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div><!--End of Panel group-->
+
+
+          
+            <div class="panel-group " id="accordion">
+              <div class="panel panel-default paperDiv">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse18">
+                       B.Com(Hons.)                    </a>
+                  </h4>
+                </div>
+                <div id="collapse18" class="panel-collapse collapse">
+                  <div class="panel-body">
+                  
+                  <table class="table table-hover">
+                                        <thead>
+                        <tr>
+                          <th>Alumni Name</th>
+                          <th>Current Designation</th>
+                          <th>Current Company</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                                                <tr>
+                          <td>
+                            Pradeep Singh                          </td>
+                          <td>
+                            IAS                          </td>
+                          <td>
+                            Indian Administrative Service (IAS)                          </td>
+                          </tr>
+
+                                                <tr>
+                          <td>
+                            Amrita Vyas                          </td>
+                          <td>
+                            Consultant                           </td>
+                          <td>
+                            PwC                          </td>
+                          </tr>
+
+                                            </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div><!--End of Panel group-->
+
+
+          
+            <div class="panel-group " id="accordion">
+              <div class="panel panel-default paperDiv">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse19">
+                       BMS                    </a>
+                  </h4>
+                </div>
+                <div id="collapse19" class="panel-collapse collapse">
+                  <div class="panel-body">
+                  
+                  <table class="table table-hover">
+                                        <thead>
+                        <tr>
+                          <th>Alumni Name</th>
+                          <th>Current Designation</th>
+                          <th>Current Company</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                                                <tr>
+                          <td>
+                            Anamika Subhash Tiwari                          </td>
+                          <td>
+                            Head of Insights                           </td>
+                          <td>
+                            Philip Morris                           </td>
+                          </tr>
+
+                                            </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div><!--End of Panel group-->
+
+
+          
+
+
+
+
+ <script src="./js/faculty_profile.js"></script></div>
+
+            
+            
+       
+    <br><br>
+  </div>
+  <br>
+</div>
+<script>
+
+    alumni_get('reg');
+    
+</script>
+<footer id="site-footer">
+      <div class="container" id="i13">
+        <div class="row">
+          <div class="col-md-5">
+            <a href="index.php"><img src="images/iips_logo2.png" id="logo"></a><br><br><br>
+           <!-- <a href="https://www.facebook.com/expressions12/?ref=br_rs" target="_blank"><span class="fa fa-facebook fa-15x faa-tada animated-hover faa-fast" id="i14"></span></a>
+            <a href="https://twitter.com/iipsdavv" target="_blank"><span class="fa fa-twitter fa-15x faa-tada animated-hover faa-fast icon-color"></span></a>
+            <a href="https://www.linkedin.com/vsearch/f?type=all&keywords=iips+davv&orig=GLHD&rsid=&pageKey=oz-winner&trkInfo=tarId%3A1467819142685&search=Search" target="_blank"><span class="fa fa-linkedin fa-15x faa-tada animated-hover faa-fast icon-color"></span></a>
+            <a href="https://plus.google.com/u/0/110977532784004536112/videos" target="_blank"><span class="fa fa-google-plus fa-15x faa-tada animated-hover faa-fast icon-color"></span></a>
+            <a href="https://www.instagram.com/explore/locations/275894915/" target="_blank"><span class="fa fa-instagram fa-15x faa-tada animated-hover faa-fast icon-color"></span></a>-->
+            <br><br>
+            
+          </div>
+          <div class="col-md-7">
+              <div class="row">
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                  <ul class="nav">
+                    <h4>Admission</h4>
+                    <li><a href="fee_structure.php">Fees Structure</a></li>
+                    <li><a href="https://www.dauniv.ac.in/cuet2025/index.php" target="_blank">Admission CUET -2025 (Programs under DAVV CET)</a></li>
+                    
+                  </ul>
+                </div>
+                          
+                <!--<div class="col-md-3 col-sm-3 col-xs-6"> 
+                  <ul class="nav">
+                    <h4 class="visible-xs visible-sm">RTI</h4>
+                    <h4 class="visible-md visible-lg" style="padding-left:10%">RTI</h4>
+                    <li><a href="press_release.php" >Press Release</a></li>
+                    <li><a href="http://www.dauniv.ac.in/DAVV_Ordinance.php" >Ordinances</a></li>
+                    <li><a href="iqac.php" >IQAC</a></li>
+                    <li><a href="recruitments.php" >Recruitments</a></li>
+                    <li><a href="greviances.php" >Greviances</a></li>
+                  </ul>
+                </div>-->
+
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                  <ul class="nav">
+                    <h4>Miscellaneous</h4>
+                    <li><a href="https://www.dauniv.ac.in/davv-ordinance" target="_blank">Ordinances</a></li>
+                    <!--<li><a href="iqac.php" >IQAC</a></li>-->
+                     <li><a href="grievance.php">Grievance </a></li>
+                    <li><a href="faculty_profile.php">Faculty Profile</a></li>
+                    <li><a href="staff_profile.php">Staff Profile</a></li>
+                    <!--<li><a href="under_construction.php" >Student Verification</a></li>-->
+                    <li><a href="video_channel.php">Video Channel</a></li>
+                    <li><a href="nss.php">NSS</a></li>
+                  </ul>                
+                </div>
+                            
+                <div class="col-md-3 col-sm-3 col-xs-6">
+                  <ul class="nav">
+                    <h4>Downloads</h4>
+                    <li><a href="static/pdf/acc_calendar/AcademicCalenderJulyDec2025.pdf" target="_blank">Academic Calendar</a></li>
+                    <li><a href="syllabus.php">Syllabus</a></li>
+                    <!--<li><a href="results.php" >Results </a></li>
+                    <li><a href="downloads.php" >Faculty CV</a></li>-->
+                  </ul>
+                </div>
+                 <div class="col-md-3 col-sm-3 col-xs-6">
+                  <ul class="nav">
+                    <h4>Digital Library</h4>
+                    <li><a href="https://ugcmoocs.inflibnet.ac.in/" target="_blank">SWAYAM MOOCs</a></li>
+                    <li><a href="https://nptel.ac.in/" target="_blank">NPTEL</a></li>
+                    
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-4">
+				© 2025 International Institute of Professional Studies <a href="https://www.linkedin.com/school/iips-davv/" target="_blank"><img src="/images/LinkedIn_icon_circle.svg.png" width="24px" height="24px"> </a>
+				<a href="https://www.instagram.com/iipsdavvindore/" target="_blank"><img src="images/insta.jpg" width="24px" height="24px"> </a>
+				<a href="https://x.com/iipsdavvindore" target="_blank"><img src="images/x-logo.jpg" width="24px" height="24px"> </a>
+            </div>
+            <div class="col-md-6"></div>
+            <div class="col-md-2 col-xs-6">
+                <a href="developers.php" style="color:#AEAEAE;">About Developers</a>
+            </div>          
+            <div class="col-xs-6 visible-xs">
+              <a class="back-to-top" href=" "><i class="glyphicon glyphicon-menu-up" style="color:white;font-size:160%;float:right;"></i> </a>
+            </div>
+        </div>
+      </div>
+    </footer>
+
+    
+
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+     <script>
+      $(function() {
+        window.prettyPrint && prettyPrint()
+        $(document).on('click', '.yamm .dropdown-menu', function(e) {
+          e.stopPropagation()
+        })
+      });
+     
+    </script>
+    
+    <script>
+                                        $("#searchForm").submit(function(){
+                                                var searchtext ='https://www.google.co.in/webhp?hl=en#hl=en&q=site:iips.edu.in '+ $("#txtSearch").val();
+                                                
+                                                $("#searchForm").attr('action',searchtext);
+                                          }                                        
+                                         );
+                                         $("#searchFormResponsive").submit(function(){
+                                                var searchtext ='https://www.google.co.in/webhp?hl=en#hl=en&q=site:iips.edu.in '+ $("#txtSearchResponsive").val();
+                                                
+                                                $("#searchFormResponsive").attr('action',searchtext);
+                                          }                                        
+                                         );
+      </script>
+    
+     <script src="js/jquery.colorbox.js"></script>
+     <script>
+            $(document).ready(function(){
+                             
+                $(".event_tourista_group2").colorbox({rel:'event_tourista_group2', transition:"fade",width:"75%", height:"75%"});
+                $(".event_maya_group2").colorbox({rel:'event_maya_group2', transition:"fade",width:"75%", height:"75%"});
+                $(".event_ms2_group2").colorbox({rel:'event_ms2_group2', transition:"fade",width:"75%", height:"75%"});
+                $(".mca_ai_group2").colorbox({rel:'mca_ai_group2', transition:"fade",width:"75%", height:"75%"});
+                $(".mtech_ai_group2").colorbox({rel:'mtech_ai_group2', transition:"fade",width:"75%", height:"75%"});
+                $(".placement_media_group2").colorbox({rel:'placement_media_group2', transition:"fade",width:"75%", height:"75%"});
+                $(".event_xpression_group2").colorbox({rel:'event_xpression_group2', transition:"fade",width:"75%", height:"75%"});
+            });
+    </script>   
+    </div> <!--End of id = OuterDiv of header-->  
+  
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button type="button" id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div></body></html>

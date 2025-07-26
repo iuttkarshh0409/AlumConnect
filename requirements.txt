@@ -1,0 +1,6 @@
+Flask
+selenium
+beautifulsoup4
+pandas
+numpy
+mysql-connector-python
