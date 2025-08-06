@@ -1,0 +1,129 @@
+        /* General Body Styles and Base Font */
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #f3f0f8;
+            margin: 0;
+            min-height: 100vh;
+        }
+
+        /* Navbar Customization */
+        .navbar,
+        .navbar.navbar-dark.bg-primary {
+            background: #220133 !important;
+            box-shadow: 0 4px 14px 0 rgba(50,35,80,0.10);
+            padding-top: 0.7rem;
+            padding-bottom: 0.7rem;
+        }
+        .navbar-brand {
+            font-family: 'Anton', 'Poppins', Arial, sans-serif;
+            font-size: 2rem !important;
+            letter-spacing: 1px;
+            color: #ff4b79 !important;
+            transition: color 0.2s, transform 0.2s;
+        }
+        .navbar-brand:hover {
+            color: #fdcae1 !important;
+            transform: scale(1.03);
+        }
+
+        /* Main Heading Style */
+        .container h1 {
+            font-family: 'Anton', 'Poppins', sans-serif;
+            color: #771a45;
+            text-align: center;
+            font-weight: 700;
+            font-size: 2.3rem;
+            letter-spacing: 1px;
+            margin-bottom: 1.8rem;
+            text-shadow: 0 2px 6px rgba(60,10,40,0.04);
+        }
+
+        /* Search Bar Customization */
+        .input-group {
+            max-width: 510px;
+            margin: 0 auto 2rem auto;
+            box-shadow: 0 4px 22px 0 rgba(119,26,69,0.05);
+        }
+        .input-group .form-control {
+            border-right: 0;
+            border-radius: 2rem 0 0 2rem;
+            padding-left: 1.1rem;
+            color: #2d0822;
+            background-color: #fff;
+            font-size: 1.1rem;
+            transition: box-shadow 0.2s;
+            box-shadow: none;
+        }
+        .input-group .form-control:focus {
+            box-shadow: 0 0 0 2px #ffb6d6;
+            border-color: #ffb6d6;
+            outline: none;
+        }
+        .input-group .btn {
+            border-left: 0;
+            border-radius: 0 2rem 2rem 0;
+            background: linear-gradient(90deg, #ff4b79 50%, #84198c 100%);
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: none;
+            transition: background 0.15s, color 0.15s, scale 0.15s;
+        }
+        .input-group .btn:hover {
+            background: linear-gradient(90deg, #e93257 60%, #36023f 100%);
+            color: #fff;
+            scale: 1.06;
+        }
+
+        /* Table Enhancements */
+        .table-responsive {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 6px 30px 0 rgba(87,45,121,0.08);
+            margin-top: 2rem;
+        }
+        .table {
+            margin-bottom: 0;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: #fff;
+            overflow: hidden;
+            border-radius: 1rem;
+        }
+        .table thead th {
+            background: linear-gradient(93deg, #7127af 50%, #d06bb7 100%);
+            color: #fff;
+            font-size: 1.04rem;
+            font-family: 'Poppins', Arial, sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            vertical-align: middle;
+            border-top: none;
+            border-bottom: none;
+            text-align: center;
+        }
+        .table-striped > tbody > tr:nth-of-type(odd) {
+            background-color: #f8eafd;
+        }
+        .table-hover tbody tr {
+            transition: background-color 0.18s, box-shadow 0.14s;
+        }
+        .table-hover tbody tr:hover {
+            background-color: #fbeae6 !important;
+            box-shadow: 0 4px 24px 0 rgba(255,75,121,0.08);
+            cursor: pointer;
+        }
+        .table tbody td,
+        .table tbody th {
+            text-align: center;
+            vertical-align: middle;
+            font-size: 1.01rem;
+            color: #2c0e24;
+            border-top: none;
+            border-bottom: 1px solid #f2c2db;
+            padding: 0.7rem 0.6rem;
+        }
+        .table tbody th {
+            font-family: 'Poppins', Arial, sans-serif;
+            color: #7d1977;
+        }

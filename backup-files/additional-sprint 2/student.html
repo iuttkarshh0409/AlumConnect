@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - AlumConnect</title>
+    <!-- Bootstrap and Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Anton:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm" aria-label="Main navigation">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold fs-4" href="/">AlumConnect</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1 class="mb-4">Alumni List</h1>
+
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search for alumni by name, role, company or domain...">
+            <button class="btn btn-outline-secondary" type="button">Search</button>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Sr. No</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Company</th>
+                        <th scope="col">Domain</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- DYNAMIC DATA LOOP STARTS HERE -->
+                    {% for person in alumni %}
+                    <tr>
+                        <th scope="row">{{ loop.index }}</th>
+                        <td>{{ person.name }}</td>
+                        <td>{{ person.role }}</td>
+                        <td>{{ person.company }}</td>
+                        <td>{{ person.domain }}</td>
+                    </tr>
+                    {% endfor %}
+                    <!-- DYNAMIC DATA LOOP ENDS HERE -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+                document.addEventListener('DOMContentLoaded', () => {
+            const table = document.querySelector('#alumniTable');
+            const tbody = table.querySelector('tbody');
+            const headers = table.querySelectorAll('.sort');
+            const searchInput = document.querySelector('input[name="query"]');
+            const loadingOverlay = document.querySelector('#loadingOverlay');
+            let originalRows = Array.from(tbody.querySelectorAll('tr'));
+
+            // Simulate loading state (remove in production if data is pre-loaded)
+            setTimeout(() => {
+                loadingOverlay.classList.remove('active');
+            }, 1000);
+
+            // Row selection
+            tbody.addEventListener('click', (e) => {
+                const row = e.target.closest('tr');
+                if (row) {
+                    row.classList.toggle('selected');
+                    row.focus();
+                }
+            });
+
+            tbody.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    e.target.classList.toggle('selected');
+                }
+            });
+
+            // Sorting
+            headers.forEach(header => {
+                header.addEventListener('click', () => {
+                    const sortKey = header.dataset.sort;
+                    const isAsc = !header.classList.contains('asc');
+                    headers.forEach(h => {
+                        h.classList.remove('asc', 'desc');
+                        h.setAttribute('aria-sort', 'none');
+                        h.querySelector('.sort-icon').textContent = '';
+                    });
+                    header.classList.add(isAsc ? 'asc' : 'desc');
+                    header.setAttribute('aria-sort', isAsc ? 'ascending' : 'descending');
+                    sortTable(sortKey, isAsc);
+                });
+            });
+
+            function sortTable(key, isAsc) {
+                loadingOverlay.classList.add('active');
+                const rows = Array.from(tbody.querySelectorAll('tr'));
+                const index = ['sr-no', 'name', 'role', 'company', 'domain'].indexOf(key);
+                rows.sort((a, b) => {
+                    let aValue = a.children[index].textContent;
+                    let bValue = b.children[index].textContent;
+                    if (key === 'sr-no') {
+                        aValue = parseInt(aValue);
+                        bValue = parseInt(bValue);
+                    }
+                    return isAsc ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
+                });
+                tbody.innerHTML = '';
+                rows.forEach(row => tbody.appendChild(row));
+                setTimeout(() => loadingOverlay.classList.remove('active'), 300);
+            }
+
+            // Search filtering
+            if (searchInput) {
+                searchInput.addEventListener('input', () => {
+                    loadingOverlay.classList.add('active');
+                    const query = searchInput.value.toLowerCase();
+                    tbody.innerHTML = '';
+                    const filteredRows = originalRows.filter(row => {
+                        return Array.from(row.cells).some(cell =>
+                            cell.textContent.toLowerCase().includes(query)
+                        );
+                    });
+                    filteredRows.forEach(row => tbody.appendChild(row));
+                    setTimeout(() => loadingOverlay.classList.remove('active'), 300);
+                });
+            }
+
+            // Export to CSV
+            document.getElementById('exportBtn').addEventListener('click', () => {
+                const rows = Array.from(tbody.querySelectorAll('tr'));
+                const headers = Array.from(table.querySelectorAll('th')).map(th => th.textContent.replace(/\s*\u2191|\u2193/g, '').trim());
+                const csv = [
+                    headers.join(','),
+                    ...rows.map(row =>
+                        Array.from(row.cells).map(cell => `"${cell.textContent.replace(/"/g, '""')}"`).join(',')
+                    )
+                ].join('\n');
+                const blob = new Blob([csv], { type: 'text/csv' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'alumni-data.csv';
+                a.click();
+                URL.revokeObjectURL(url);
+            });
+
+            // Sidebar toggle
+            const sidebar = document.getElementById('sidebar');
+            const sidebarToggle = document.getElementById('sidebarToggle');
+            const mainContent = document.querySelector('.main-content');
+            sidebarToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('hidden');
+                sidebar.classList.toggle('active');
+                mainContent.classList.toggle('full');
+            });
+
+            // Dark mode toggle
+            const themeToggle = document.getElementById('themeToggle');
+            themeToggle.addEventListener('click', () => {
+                document.body.dataset.theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+                themeToggle.innerHTML = document.body.dataset.theme === 'dark' ?
+                    '<i class="bi bi-sun-fill"></i>' : '<i class="bi bi-moon-stars-fill"></i>';
+            });
+        });
+
+    </script>
+
+</body>

@@ -1,0 +1,36 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Hint: You can change this to another font like 'Verdana' or 'Georgia' */
+    background-color: #f8f9fa; /* Hint: This is a light grey. Try #ffffff for pure white or #e9ecef for a slightly darker grey. */
+}
+
+/* Navbar Customization */
+.navbar-dark.bg-dark {
+    background-color: #003366 !important; /* Hint: This is a custom dark blue. The '!important' makes sure it overrides Bootstrap's default style. Try other hex codes like #343a40. */
+}
+
+/* Main Heading Style */
+.container h1 {
+    color: #333; /* Hint: This is a dark grey for the text. Try changing it to match the navbar color. */
+    text-align: center; /* Hint: This centers the "Alumni List" text. You could also use 'left' or 'right'. */
+}
+
+/* Search Bar Customization */
+.input-group .form-control {
+    border-right: 0; /* Hint: This removes the border between the input and the button for a cleaner look. */
+}
+
+.input-group .btn {
+    border-left: 0; /* Hint: This removes the border on the button's left side. */
+}
+
+/* Table Header Customization */
+.table-dark {
+    background-color: #004085; /* Hint: Let's make the table header a different shade of blue. Try to match the navbar or use a complementary color. */
+}
+
+/* Table Row Hover Effect */
+.table-hover tbody tr:hover {
+    background-color: #d4edda; /* Hint: This is a light green. It will show when a user hovers their mouse over a row. Try other colors like #cfe2ff (light blue). */
+    cursor: pointer; /* Hint: This changes the mouse cursor to a pointer on hover to show that the row is interactive. */
+}

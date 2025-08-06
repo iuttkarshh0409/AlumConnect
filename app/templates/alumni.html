@@ -9,6 +9,237 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/alumni.css') }}">
     
 </head>
+<style>
+        body {
+        font-family: 'Poppins', Arial, sans-serif;
+        background-color: #f3f0f8;
+        color: #231129;
+        margin: 0;
+        min-height: 100vh;
+        transition: background 0.3s, color 0.3s;
+    }
+    /* === Navbar Branding Consistency === */
+    .navbar,
+    .navbar.navbar-dark.bg-primary {
+        background: #220133 !important;
+        box-shadow: 0 4px 14px 0 rgba(50,35,80,0.10);
+        padding-top: 0.7rem;
+        padding-bottom: 0.7rem;
+    }
+    .navbar-brand {
+        font-family: 'Anton', 'Poppins', Arial, sans-serif;
+        font-size: 2rem !important;
+        letter-spacing: 1px;
+        color: #ff4b79 !important;
+        transition: color 0.2s, transform 0.2s;
+    }
+    .navbar-brand:hover {
+        color: #fdcae1 !important;
+        transform: scale(1.03);
+    }
+    /* === Sidebar Consistency === */
+    .sidebar {
+        background: linear-gradient(180deg, #7228af, #a65fc1 100%);
+        color: #fff;
+        font-family: 'Poppins', Arial, sans-serif;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 250px;
+        min-width: 200px;
+        box-shadow: 0 8px 36px 0 rgba(87,45,121,0.12);
+        z-index: 1000;
+        transition: transform 0.3s;
+    }
+    .sidebar .nav-link {
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 8px;
+        margin: 6px 12px;
+        font-weight: 600;
+        transition: background 0.22s, color 0.12s;
+    }
+    .sidebar .nav-link:hover,
+    .sidebar .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.17);
+        color: #ffb6d6;
+    }
+    .sidebar.hidden {
+        transform: translateX(-250px);
+    }
+    .sidebar .nav-link i { opacity: 0.86; }
+    .main-content {
+        margin-left: 250px;
+        padding: 20px;
+        transition: margin-left 0.3s;
+    }
+    .main-content.full { margin-left: 0; }
+
+    /* === Heading (H1) Style === */
+    h1, .main-content h1, .container h1 {
+        font-family: 'Anton', 'Poppins', sans-serif;
+        color: #771a45 !important;
+        text-align: center;
+        font-weight: 700;
+        font-size: 2.2rem;
+        letter-spacing: 1px;
+        margin-bottom: 1.6rem;
+        text-shadow: 0 2px 6px rgba(60,10,40,0.06);
+    }
+
+    /* === Search Bar Consistency === */
+    .input-group {
+        max-width: 520px;
+        margin: 0 auto 2rem auto;
+        box-shadow: 0 4px 24px 0 rgba(119,26,69,0.07);
+    }
+    .input-group .input-group-text {
+        background: #fff;
+        border: none;
+        border-right: 0;
+        color: #a36fa0;
+        font-size: 1.15rem;
+    }
+    .input-group .form-control {
+        border-right: 0;
+        border-radius: 2rem 0 0 2rem;
+        padding-left: 1.1rem;
+        color: #2d0822;
+        background-color: #fff;
+        font-size: 1.08rem;
+        box-shadow: none;
+    }
+    .input-group .form-control:focus {
+        box-shadow: 0 0 0 2px #ffb6d6;
+        border-color: #ffb6d6;
+        outline: none;
+    }
+    .input-group .btn {
+        border-left: 0;
+        border-radius: 0 2rem 2rem 0;
+        background: linear-gradient(90deg, #ff4b79 40%, #84198c 100%);
+        color: #fff;
+        font-weight: 600;
+        font-size: 1.06rem;
+        box-shadow: none;
+        transition: background 0.17s, color 0.16s, scale 0.15s;
+    }
+    .input-group .btn:hover {
+        background: linear-gradient(90deg, #e93257 60%, #36023f 100%);
+        color: #fff;
+        scale: 1.04;
+    }
+    input::placeholder { color: #a36fa0 !important; opacity: 1; }
+
+    /* === Table Upgrades === */
+    .table-responsive {
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 6px 32px 0 rgba(87,45,121,0.09);
+        margin-top: 2rem;
+        background: #fff;
+    }
+    .table {
+        margin-bottom: 0;
+        border-collapse: separate;
+        border-spacing: 0;
+        background: #fff;
+        overflow: hidden;
+    }
+    .sticky-header, .table thead th {
+        background: linear-gradient(93deg, #7127af 60%, #d06bb7 100%);
+        color: #fff;
+        font-family: 'Poppins', Arial, sans-serif;
+        font-weight: 700;
+        font-size: 1.07rem;
+        letter-spacing: 0.85px;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .table-striped > tbody > tr:nth-of-type(odd) {
+        background-color: #f8eafd;
+    }
+    .table-hover tbody tr {
+        transition: background-color 0.20s, box-shadow 0.13s;
+    }
+    .table-hover tbody tr:hover {
+        background-color: #fbeae6 !important;
+        box-shadow: 0 4px 24px 0 rgba(255,75,121,0.10);
+        cursor: pointer;
+    }
+    .table tbody td, .table tbody th {
+        text-align: center;
+        vertical-align: middle;
+        font-size: 1.01rem;
+        color: #2c0e24;
+        border-top: none;
+        border-bottom: 1px solid #f2c2db;
+        padding: 0.75rem 0.7rem;
+    }
+    .table tbody th { color: #7d1977; }
+    .sort-icon { margin-left: 8px; color: #fff; }
+
+    /* === Export/Button Style === */
+    .btn-outline-primary, #exportBtn {
+        border-color: #85264d;
+        color: #771a45;
+        font-weight: 600;
+        border-radius: 2rem;
+        transition: background 0.14s;
+    }
+    .btn-outline-primary:hover, #exportBtn:hover {
+        background: linear-gradient(90deg, #ff4b79 40%, #84198c 100%);
+        color: #fff;
+        border-color: #7d1977;
+    }
+
+    /* === Footer Consistency === */
+    footer.bg-light {
+        background: #f1e6f4 !important;
+        color: #771a45 !important;
+        box-shadow: 0 3px 16px 0 rgba(119,26,69,0.07);
+        border-top: none;
+    }
+    footer p { margin-bottom: 0; }
+
+    /* === Mobile Responsiveness === */
+    @media (max-width: 991px) {
+        .sidebar { transform: translateX(-250px); }
+        .sidebar.active { transform: translateX(0); }
+        .main-content { margin-left: 0; }
+    }
+    @media (max-width: 576px) {
+        h1, .main-content h1, .container h1 {
+            font-size: 1.25rem;
+        }
+        .input-group { max-width: 99%; }
+        .table thead { display: none; }
+        .table, .table tbody, .table tr, .table td, .table th {
+            display: block;
+            width: 100%;
+        }
+        .table tr {
+            box-shadow: 0 2px 8px #f7e1eb;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+        }
+        .table tbody td:before {
+            content: attr(data-label);
+            font-weight: bold;
+            color: #771a45;
+            display: block;
+            margin-bottom: 0.25rem;
+            font-size: 0.97em;
+        }
+        .table tbody td, .table tbody th {
+            padding: 0.74rem 1.1rem;
+            text-align: left;
+            border-bottom: none;
+        }
+    }
+
+</style>
 <body>
     <!-- Sidebar -->
     <nav class="sidebar hidden" id="sidebar" aria-label="Sidebar navigation">
@@ -132,6 +363,124 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ url_for('static', filename='js/alumni.js') }}"></script>
+    <script>
+                document.addEventListener('DOMContentLoaded', () => {
+            const table = document.querySelector('#alumniTable');
+            const tbody = table.querySelector('tbody');
+            const headers = table.querySelectorAll('.sort');
+            const searchInput = document.querySelector('input[name="query"]');
+            const loadingOverlay = document.querySelector('#loadingOverlay');
+            let originalRows = Array.from(tbody.querySelectorAll('tr'));
+
+            // Simulate loading state (remove in production if data is pre-loaded)
+            setTimeout(() => {
+                loadingOverlay.classList.remove('active');
+            }, 1000);
+
+            // Row selection
+            tbody.addEventListener('click', (e) => {
+                const row = e.target.closest('tr');
+                if (row) {
+                    row.classList.toggle('selected');
+                    row.focus();
+                }
+            });
+
+            tbody.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    e.target.classList.toggle('selected');
+                }
+            });
+
+            // Sorting
+            headers.forEach(header => {
+                header.addEventListener('click', () => {
+                    const sortKey = header.dataset.sort;
+                    const isAsc = !header.classList.contains('asc');
+                    headers.forEach(h => {
+                        h.classList.remove('asc', 'desc');
+                        h.setAttribute('aria-sort', 'none');
+                        h.querySelector('.sort-icon').textContent = '';
+                    });
+                    header.classList.add(isAsc ? 'asc' : 'desc');
+                    header.setAttribute('aria-sort', isAsc ? 'ascending' : 'descending');
+                    sortTable(sortKey, isAsc);
+                });
+            });
+
+            function sortTable(key, isAsc) {
+                loadingOverlay.classList.add('active');
+                const rows = Array.from(tbody.querySelectorAll('tr'));
+                const index = ['sr-no', 'name', 'role', 'company', 'domain'].indexOf(key);
+                rows.sort((a, b) => {
+                    let aValue = a.children[index].textContent;
+                    let bValue = b.children[index].textContent;
+                    if (key === 'sr-no') {
+                        aValue = parseInt(aValue);
+                        bValue = parseInt(bValue);
+                    }
+                    return isAsc ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
+                });
+                tbody.innerHTML = '';
+                rows.forEach(row => tbody.appendChild(row));
+                setTimeout(() => loadingOverlay.classList.remove('active'), 300);
+            }
+
+            // Search filtering
+            if (searchInput) {
+                searchInput.addEventListener('input', () => {
+                    loadingOverlay.classList.add('active');
+                    const query = searchInput.value.toLowerCase();
+                    tbody.innerHTML = '';
+                    const filteredRows = originalRows.filter(row => {
+                        return Array.from(row.cells).some(cell =>
+                            cell.textContent.toLowerCase().includes(query)
+                        );
+                    });
+                    filteredRows.forEach(row => tbody.appendChild(row));
+                    setTimeout(() => loadingOverlay.classList.remove('active'), 300);
+                });
+            }
+
+            // Export to CSV
+            document.getElementById('exportBtn').addEventListener('click', () => {
+                const rows = Array.from(tbody.querySelectorAll('tr'));
+                const headers = Array.from(table.querySelectorAll('th')).map(th => th.textContent.replace(/\s*\u2191|\u2193/g, '').trim());
+                const csv = [
+                    headers.join(','),
+                    ...rows.map(row =>
+                        Array.from(row.cells).map(cell => `"${cell.textContent.replace(/"/g, '""')}"`).join(',')
+                    )
+                ].join('\n');
+                const blob = new Blob([csv], { type: 'text/csv' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'alumni-data.csv';
+                a.click();
+                URL.revokeObjectURL(url);
+            });
+
+            // Sidebar toggle
+            const sidebar = document.getElementById('sidebar');
+            const sidebarToggle = document.getElementById('sidebarToggle');
+            const mainContent = document.querySelector('.main-content');
+            sidebarToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('hidden');
+                sidebar.classList.toggle('active');
+                mainContent.classList.toggle('full');
+            });
+
+            // Dark mode toggle
+            const themeToggle = document.getElementById('themeToggle');
+            themeToggle.addEventListener('click', () => {
+                document.body.dataset.theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+                themeToggle.innerHTML = document.body.dataset.theme === 'dark' ?
+                    '<i class="bi bi-sun-fill"></i>' : '<i class="bi bi-moon-stars-fill"></i>';
+            });
+        });
+
+    </script>
 </body>
 </html>
