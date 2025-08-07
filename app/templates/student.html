@@ -4,224 +4,935 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard - AlumConnect</title>
-    <!-- Bootstrap and Fonts -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Anton:wght@700&display=swap" rel="stylesheet">
+    <meta name="description" content="Access the AlumConnect Student Dashboard to connect with alumni, explore opportunities, and grow your professional network.">
+    <meta name="author" content="AlumConnect">
+    <meta name="keywords" content="alumni, students, networking, mentorship, career development">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Student Dashboard - AlumConnect">
+    <meta property="og:description" content="Connect with alumni and explore career opportunities on the AlumConnect Student Dashboard.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://alumconnect.com/assets/og-image.jpg">
+    <meta property="og:url" content="https://alumconnect.com/student">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@AlumConnect">
+    
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
-                /* General Body Styles and Base Font */
-        body {
-            font-family: 'Poppins', Arial, sans-serif;
-            background-color: #f3f0f8;
+        :root {
+            --background: 0 0% 100%;
+            --foreground: 222.2 84% 4.9%;
+            --card: 0 0% 100%;
+            --card-foreground: 222.2 84% 4.9%;
+            --popover: 0 0% 100%;
+            --popover-foreground: 222.2 84% 4.9%;
+            --primary: 221.2 83.2% 53.3%;
+            --primary-foreground: 210 40% 98%;
+            --secondary: 210 40% 96%;
+            --secondary-foreground: 222.2 84% 4.9%;
+            --muted: 210 40% 96%;
+            --muted-foreground: 215.4 16.3% 46.9%;
+            --accent: 210 40% 96%;
+            --accent-foreground: 222.2 84% 4.9%;
+            --destructive: 0 84.2% 60.2%;
+            --destructive-foreground: 210 40% 98%;
+            --border: 214.3 31.8% 91.4%;
+            --input: 214.3 31.8% 91.4%;
+            --ring: 221.2 83.2% 53.3%;
+            --radius: 0.75rem;
+            --gradient-primary: linear-gradient(135deg, hsl(221.2 83.2% 53.3%), hsl(262.1 83.3% 57.8%));
+            --gradient-hero: linear-gradient(135deg, hsl(221.2 83.2% 53.3%) 0%, hsl(262.1 83.3% 57.8%) 100%);
+            --shadow-elegant: 0 10px 30px -10px hsl(221.2 83.2% 53.3% / 0.3);
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .dark {
+            --background: 222.2 84% 4.9%;
+            --foreground: 210 40% 98%;
+            --card: 222.2 84% 4.9%;
+            --card-foreground: 210 40% 98%;
+            --popover: 222.2 84% 4.9%;
+            --popover-foreground: 210 40% 98%;
+            --primary: 217.2 91.2% 59.8%;
+            --primary-foreground: 222.2 84% 4.9%;
+            --secondary: 217.2 32.6% 17.5%;
+            --secondary-foreground: 210 40% 98%;
+            --muted: 217.2 32.6% 17.5%;
+            --muted-foreground: 215 20.2% 65.1%;
+            --accent: 217.2 32.6% 17.5%;
+            --accent-foreground: 210 40% 98%;
+            --destructive: 0 62.8% 30.6%;
+            --destructive-foreground: 210 40% 98%;
+            --border: 217.2 32.6% 17.5%;
+            --input: 217.2 32.6% 17.5%;
+            --ring: 224.3 76.3% 94.1%;
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            min-height: 100vh;
+            padding: 0;
         }
 
-        /* Navbar Customization */
-        .navbar,
-        .navbar.navbar-dark.bg-primary {
-            background: #220133 !important;
-            box-shadow: 0 4px 14px 0 rgba(50,35,80,0.10);
-            padding-top: 0.7rem;
-            padding-bottom: 0.7rem;
-        }
-        .navbar-brand {
-            font-family: 'Anton', 'Poppins', Arial, sans-serif;
-            font-size: 2rem !important;
-            letter-spacing: 1px;
-            color: #ff4b79 !important;
-            transition: color 0.2s, transform 0.2s;
-        }
-        .navbar-brand:hover {
-            color: #fdcae1 !important;
-            transform: scale(1.03);
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: hsl(var(--background));
+            color: hsl(var(--foreground));
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* Main Heading Style */
-        .container h1 {
-            font-family: 'Anton', 'Poppins', sans-serif;
-            color: #771a45;
-            text-align: center;
+        /* Navigation */
+        .navbar {
+            background: hsl(var(--primary));
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-elegant);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            color: hsl(var(--primary-foreground));
+            text-decoration: none;
+            font-size: 1.5rem;
             font-weight: 700;
-            font-size: 2.3rem;
-            letter-spacing: 1px;
-            margin-bottom: 1.8rem;
-            text-shadow: 0 2px 6px rgba(60,10,40,0.04);
+            gap: 0.5rem;
         }
 
-        /* Search Bar Customization */
-        .input-group {
-            max-width: 510px;
-            margin: 0 auto 2rem auto;
-            box-shadow: 0 4px 22px 0 rgba(119,26,69,0.05);
-        }
-        .input-group .form-control {
-            border-right: 0;
-            border-radius: 2rem 0 0 2rem;
-            padding-left: 1.1rem;
-            color: #2d0822;
-            background-color: #fff;
-            font-size: 1.1rem;
-            transition: box-shadow 0.2s;
-            box-shadow: none;
-        }
-        .input-group .form-control:focus {
-            box-shadow: 0 0 0 2px #ffb6d6;
-            border-color: #ffb6d6;
-            outline: none;
-        }
-        .input-group .btn {
-            border-left: 0;
-            border-radius: 0 2rem 2rem 0;
-            background: linear-gradient(90deg, #ff4b79 50%, #84198c 100%);
-            color: #fff;
-            font-weight: 600;
-            font-size: 1.1rem;
-            box-shadow: none;
-            transition: background 0.15s, color 0.15s, scale 0.15s;
-        }
-        .input-group .btn:hover {
-            background: linear-gradient(90deg, #e93257 60%, #36023f 100%);
-            color: #fff;
-            scale: 1.06;
+        .nav-brand:hover {
+            color: hsl(var(--primary-foreground) / 0.9);
         }
 
-        /* Table Enhancements */
-        .table-responsive {
-            border-radius: 1rem;
-            overflow: hidden;
-            box-shadow: 0 6px 30px 0 rgba(87,45,121,0.08);
-            margin-top: 2rem;
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            list-style: none;
         }
-        .table {
-            margin-bottom: 0;
-            border-collapse: separate;
-            border-spacing: 0;
-            background: #fff;
-            overflow: hidden;
-            border-radius: 1rem;
+
+        .nav-link {
+            color: hsl(var(--primary-foreground));
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: var(--transition-smooth);
         }
-        .table thead th {
-            background: linear-gradient(93deg, #7127af 50%, #d06bb7 100%);
-            color: #fff;
-            font-size: 1.04rem;
-            font-family: 'Poppins', Arial, sans-serif;
-            font-weight: 700;
-            letter-spacing: 0.8px;
-            vertical-align: middle;
-            border-top: none;
-            border-bottom: none;
-            text-align: center;
+
+        .nav-link:hover {
+            background: hsl(var(--primary-foreground) / 0.1);
         }
-        .table-striped > tbody > tr:nth-of-type(odd) {
-            background-color: #f8eafd;
+
+        .nav-auth {
+            display: flex;
+            gap: 0.75rem;
         }
-        .table-hover tbody tr {
-            transition: background-color 0.18s, box-shadow 0.14s;
+
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
         }
-        .table-hover tbody tr:hover {
-            background-color: #fbeae6 !important;
-            box-shadow: 0 4px 24px 0 rgba(255,75,121,0.08);
+
+        .btn-outline {
+            background: transparent;
+            color: hsl(var(--primary-foreground));
+            border: 1px solid hsl(var(--primary-foreground));
+        }
+
+        .btn-outline:hover {
+            background: hsl(var(--primary-foreground));
+            color: hsl(var(--primary));
+        }
+
+        .btn-primary {
+            background: hsl(var(--primary-foreground));
+            color: hsl(var(--primary));
+        }
+
+        .btn-primary:hover {
+            background: hsl(var(--primary-foreground) / 0.9);
+        }
+
+        .btn-gradient {
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+        }
+
+        .btn-gradient:hover {
+            background: linear-gradient(135deg, hsl(221.2 83.2% 48.3%), hsl(262.1 83.3% 52.8%));
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: hsl(var(--primary-foreground));
+            font-size: 1.5rem;
             cursor: pointer;
         }
+
+        /* Main Content */
+        .section {
+            padding: 5rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: hsl(var(--foreground));
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            color: hsl(var(--muted-foreground));
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Search Bar */
+        .search-container {
+            max-width: 510px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid hsl(var(--border));
+            border-radius: 0.5rem;
+            background: hsl(var(--background));
+            color: hsl(var(--foreground));
+            transition: var(--transition-smooth);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: hsl(var(--primary));
+            box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
+        }
+
+        .form-input-icon {
+            position: relative;
+        }
+
+        .form-input-icon input {
+            padding-left: 2.5rem;
+        }
+
+        .form-icon {
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: hsl(var(--muted-foreground));
+        }
+
+        /* Table */
+        .table-container {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 6px 30px hsl(0 0% 0% / 0.1);
+            margin-top: 2rem;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: hsl(var(--card));
+            border-radius: var(--radius);
+        }
+
+        .table thead th {
+            background: var(--gradient-primary);
+            color: hsl(var(--primary-foreground));
+            font-size: 1.04rem;
+            font-weight: 700;
+            padding: 1rem;
+            text-align: center;
+            vertical-align: middle;
+            border-bottom: 1px solid hsl(var(--border));
+        }
+
+        .table tbody tr {
+            transition: var(--transition-smooth);
+        }
+
+        .table tbody tr:hover {
+            background: hsl(var(--secondary));
+            box-shadow: var(--shadow-elegant);
+            cursor: pointer;
+        }
+
         .table tbody td,
         .table tbody th {
             text-align: center;
             vertical-align: middle;
             font-size: 1.01rem;
-            color: #2c0e24;
-            border-top: none;
-            border-bottom: 1px solid #f2c2db;
+            color: hsl(var(--foreground));
+            border-bottom: 1px solid hsl(var(--border));
             padding: 0.7rem 0.6rem;
         }
+
         .table tbody th {
-            font-family: 'Poppins', Arial, sans-serif;
-            color: #7d1977;
+            font-weight: 600;
+            color: hsl(var(--primary));
         }
 
+        /* Footer */
+        .footer {
+            background: hsl(var(--muted));
+            padding: 3rem 1rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .footer p {
+            color: hsl(var(--muted-foreground));
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .footer-link {
+            color: hsl(var(--muted-foreground));
+            text-decoration: none;
+            font-size: 1.25rem;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-link:hover {
+            color: hsl(var(--primary));
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: hsl(0 0% 0% / 0.5);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal.show {
+            display: flex;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .modal-content {
+            background: hsl(var(--background));
+            border-radius: var(--radius);
+            padding: 2rem;
+            max-width: 400px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: hsl(var(--foreground));
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: hsl(var(--muted-foreground));
+        }
+
+        .tabs {
+            margin-bottom: 3rem;
+        }
+
+        .tab-list {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            background: hsl(var(--muted));
+            padding: 0.5rem;
+            border-radius: 0.75rem;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .tab-trigger {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            background: transparent;
+            color: hsl(var(--muted-foreground));
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        .tab-trigger.active {
+            background: hsl(var(--background));
+            color: hsl(var(--foreground));
+            box-shadow: 0 2px 4px hsl(0 0% 0% / 0.1);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: hsl(var(--foreground));
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid hsl(var(--border));
+            border-radius: 0.5rem;
+            background: hsl(var(--background));
+            color: hsl(var(--foreground));
+            transition: var(--transition-smooth);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: hsl(var(--primary));
+            box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
+        }
+
+        .form-input-icon {
+            position: relative;
+        }
+
+        .form-input-icon input {
+            padding-left: 2.5rem;
+        }
+
+        .form-icon {
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: hsl(var(--muted-foreground));
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: hsl(var(--primary));
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .nav-menu.show {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .tab-list {
+                flex-direction: column;
+                max-width: 200px;
+            }
+
+            .table-container {
+                overflow-x: auto;
+            }
+        }
+
+        /* Icons */
+        .icon {
+            width: 1em;
+            height: 1em;
+            display: inline-block;
+            fill: currentColor;
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm" aria-label="Main navigation">
-        <div class="container-fluid">
-            <a class="navbar-brand fw-bold fs-4" href="/">AlumConnect</a>
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="/" class="nav-brand">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3.5 13h17v2h-17v-2zm0 3h17v2h-17v-2zm0-6h17v2h-17v-2zm0-3h17v2h-17v-2z"/>
+                </svg>
+                AlumConnect
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/student" class="nav-link">Student Portal</a></li>
+                <li><a href="/alumni" class="nav-link">Alumni Portal</a></li>
+                <li class="nav-auth">
+                    <button class="btn btn-outline" onclick="openAuthModal('login')" aria-label="Open login modal">Login</button>
+                    <button class="btn btn-primary" onclick="openAuthModal('register')" aria-label="Open registration modal">Register</button>
+                </li>
+            </ul>
+            
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">☰</button>
         </div>
     </nav>
 
-    <div class="container mt-4">
-        <h1 class="mb-4">Alumni List</h1>
+    <!-- Main Content -->
+    <section class="section" aria-labelledby="alumni-list-title">
+        <div class="container">
+            <h1 class="section-title" id="alumni-list-title">Alumni List</h1>
+            <p class="section-subtitle">Search and connect with alumni to explore mentorship and career opportunities.</p>
 
-        <!-- Search Form -->
-        <div class="input-group mb-3">
-            <!-- ADDED name="query" to the input -->
-            <input type="text" name="query" class="form-control" placeholder="Search for alumni...">
-            <button class="btn btn-primary" type="submit">Search</button>
+            <div class="search-container">
+                <div class="form-group form-input-icon">
+                    <input type="text" name="query" class="form-input" id="search-input" placeholder="Search for alumni..." aria-label="Search alumni">
+                    <span class="form-icon" aria-hidden="true">🔍</span>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="table" id="alumniTable">
+                    <thead>
+                        <tr>
+                            <th scope="col">Sr. No</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Company</th>
+                            <th scope="col">Domain</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- DYNAMIC DATA LOOP STARTS HERE -->
+                        {% for person in alumni %}
+                        <tr>
+                            <th scope="row">{{ loop.index }}</th>
+                            <td>{{ person.name }}</td>
+                            <td>{{ person.role }}</td>
+                            <td>{{ person.company }}</td>
+                            <td>{{ person.domain }}</td>
+                        </tr>
+                        {% endfor %}
+                        <!-- DYNAMIC DATA LOOP ENDS HERE -->
+                    </tbody>
+                </table>
+            </div>
         </div>
+    </section>
 
-        <!-- Alumni Table -->
-        <div class="table-responsive">
-            <!-- ADDED id="alumniTable" to the table -->
-            <table class="table table-striped table-hover" id="alumniTable">
-                <thead class="table-dark">
-                    <tr>
-                        <th scope="col">Sr. No</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Role</th>
-                        <th scope="col">Company</th>
-                        <th scope="col">Domain</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- DYNAMIC DATA LOOP STARTS HERE -->
-                    {% for person in alumni %}
-                    <tr>
-                        <th scope="row">{{ loop.index }}</th>
-                        <td>{{ person.name }}</td>
-                        <td>{{ person.role }}</td>
-                        <td>{{ person.company }}</td>
-                        <td>{{ person.domain }}</td>
-                    </tr>
-                    {% endfor %}
-                    <!-- DYNAMIC DATA LOOP ENDS HERE -->
-                </tbody>
-            </table>
+    <!-- Footer -->
+    <footer class="footer" aria-label="Footer">
+        <div class="container">
+            <p>&copy; 2025 AlumConnect. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link" aria-label="Email us">📧</a>
+                <a href="#" class="footer-link" aria-label="LinkedIn profile">💼</a>
+                <a href="#" class="footer-link" aria-label="Twitter profile">🐦</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modal -->
+    <div class="modal" id="authModal" role="dialog" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeAuthModal()" aria-label="Close modal">×</button>
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-title">Welcome to AlumConnect</h2>
+            </div>
+            
+            <div class="tabs">
+                <div class="tab-list" role="tablist">
+                    <button class="tab-trigger active" data-tab="login" role="tab" aria-selected="true" aria-controls="login">Login</button>
+                    <button class="tab-trigger" data-tab="register" role="tab" aria-selected="false" aria-controls="register">Register</button>
+                </div>
+                
+                <div class="tab-content active" id="login" role="tabpanel">
+                    <form onsubmit="handleAuth(event, 'login')" aria-label="Login form">
+                        <div class="form-group">
+                            <label class="form-label" for="login-email">Email address</label>
+                            <div class="form-input-icon">
+                                <input type="email" class="form-input" id="login-email" placeholder="Enter your email" required aria-required="true">
+                                <span class="form-icon" aria-hidden="true">📧</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="login-password">Password</label>
+                            <div class="form-input-icon">
+                                <input type="password" class="form-input" id="login-password" placeholder="Enter your password" required aria-required="true">
+                                <span class="form-icon" aria-hidden="true">🔒</span>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-gradient" style="width: 100%;" id="login-submit" aria-label="Submit login">Login</button>
+                    </form>
+                </div>
+                
+                <div class="tab-content" id="register" role="tabpanel">
+                    <form onsubmit="handleAuth(event, 'register')" aria-label="Registration form">
+                        <div class="form-group">
+                            <label class="form-label" for="register-name">Full Name</label>
+                            <div class="form-input-icon">
+                                <input type="text" class="form-input" id="register-name" placeholder="Enter your full name" required aria-required="true">
+                                <span class="form-icon" aria-hidden="true">👤</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="register-email">Email address</label>
+                            <div class="form-input-icon">
+                                <input type="email" class="form-input" id="register-email" placeholder="Enter your email" required aria-required="true">
+                                <span class="form-icon" aria-hidden="true">📧</span>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="register-password">Password</label>
+                            <div class="form-input-icon">
+                                <input type="password" class="form-input" id="register-password" placeholder="Create a password" required aria-required="true" minlength="8">
+                                <span class="form-icon" aria-hidden="true">🔒</span>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-gradient" style="width: 100%;" id="register-submit" aria-label="Submit registration">Create Account</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Link to your new student.js file -->
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-    // Find the search input field and the table body
-    const searchInput = document.querySelector('input[name="query"]');
-    const table = document.querySelector('#alumniTable');
-    const tbody = table.querySelector('tbody');
-    
-    // Store all the original rows from the table
-    const originalRows = Array.from(tbody.querySelectorAll('tr'));
+        // Global variables
+        let currentRole = null;
+        let isSubmitting = false;
 
-    // Make sure the search input exists before adding an event listener
-    if (searchInput) {
-        // This function will run every time the user types in the search box
-        searchInput.addEventListener('input', () => {
+        // Navigation functions
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('show');
+            const isExpanded = navMenu.classList.contains('show');
+            document.querySelector('.mobile-menu-btn').setAttribute('aria-expanded', isExpanded);
+        }
+
+        // Tab functionality
+        function initTabs() {
+            const tabTriggers = document.querySelectorAll('.tab-trigger');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabTriggers.forEach(trigger => {
+                trigger.addEventListener('click', () => {
+                    const targetTab = trigger.getAttribute('data-tab');
+                    const parentTabs = trigger.closest('.tabs');
+
+                    parentTabs.querySelectorAll('.tab-trigger').forEach(t => {
+                        t.classList.remove('active');
+                        t.setAttribute('aria-selected', 'false');
+                    });
+                    parentTabs.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+                    trigger.classList.add('active');
+                    trigger.setAttribute('aria-selected', 'true');
+                    const targetContent = parentTabs.querySelector(`#${targetTab}`);
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+        }
+
+        // Modal functions
+        function openAuthModal(mode = 'login', role = null) {
+            currentRole = role;
+            const modal = document.getElementById('authModal');
+            const modalTabs = modal.querySelectorAll('.tab-trigger');
+            const modalContents = modal.querySelectorAll('.tab-content');
+
+            modalTabs.forEach(t => {
+                t.classList.remove('active');
+                t.setAttribute('aria-selected', 'false');
+            });
+            modalContents.forEach(c => c.classList.remove('active'));
+
+            const targetTrigger = modal.querySelector(`[data-tab="${mode}"]`);
+            const targetContent = modal.querySelector(`#${mode}`);
+            
+            if (targetTrigger && targetContent) {
+                targetTrigger.classList.add('active');
+                targetTrigger.setAttribute('aria-selected', 'true');
+                targetContent.classList.add('active');
+            }
+
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+            modal.querySelector('.form-input').focus();
+        }
+
+        function closeAuthModal() {
+            const modal = document.getElementById('authModal');
+            modal.classList.remove('show');
+            document.body.style.overflow = '';
+            currentRole = null;
+            isSubmitting = false;
+            document.querySelectorAll('.btn-gradient').forEach(btn => btn.disabled = false);
+        }
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function validatePassword(password) {
+            return password.length >= 8;
+        }
+
+        function handleAuth(event, type) {
+            event.preventDefault();
+            
+            if (isSubmitting) return;
+            isSubmitting = true;
+            
+            const form = event.target;
+            const submitButton = form.querySelector('.btn-gradient');
+            submitButton.disabled = true;
+
+            if (type === 'register') {
+                const name = form.querySelector('#register-name').value.trim();
+                const email = form.querySelector('#register-email').value.trim();
+                const password = form.querySelector('#register-password').value;
+
+                if (!name) {
+                    alert('Please enter your full name');
+                    isSubmitting = false;
+                    submitButton.disabled = false;
+                    return;
+                }
+
+                if (!validateEmail(email)) {
+                    alert('Please enter a valid email address');
+                    isSubmitting = false;
+                    submitButton.disabled = false;
+                    return;
+                }
+
+                if (!validatePassword(password)) {
+                    alert('Password must be at least 8 characters long');
+                    isSubmitting = false;
+                    submitButton.disabled = false;
+                    return;
+                }
+            } else {
+                const email = form.querySelector('#login-email').value.trim();
+                const password = form.querySelector('#login-password').value;
+
+                if (!validateEmail(email)) {
+                    alert('Please enter a valid email address');
+                    isSubmitting = false;
+                    submitButton.disabled = false;
+                    return;
+                }
+
+                if (!password) {
+                    alert('Please enter your password');
+                    isSubmitting = false;
+                    submitButton.disabled = false;
+                    return;
+                }
+            }
+
+            console.log(`${type} submitted for role: ${currentRole || 'general'}`);
+            closeAuthModal();
+            alert(`${type === 'login' ? 'Login' : 'Registration'} successful!`);
+        }
+
+        // Search functionality
+        function triggerSearch() {
+            const searchInput = document.querySelector('#search-input');
+            const table = document.querySelector('#alumniTable');
+            const tbody = table.querySelector('tbody');
+            const originalRows = Array.from(tbody.querySelectorAll('tr'));
             const query = searchInput.value.toLowerCase();
 
-            // Clear the table to show only the filtered results
             tbody.innerHTML = '';
 
-            // Filter the original rows to find matches
             const filteredRows = originalRows.filter(row => {
-                // Check if any cell in the row contains the search query
                 return Array.from(row.cells).some(cell =>
                     cell.textContent.toLowerCase().includes(query)
                 );
             });
 
-            // Add the matching rows back to the table
             filteredRows.forEach(row => tbody.appendChild(row));
-        });
-    }
-});
+        }
 
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            initTabs();
+
+            // Close modal when clicking outside
+            document.getElementById('authModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeAuthModal();
+                }
+            });
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeAuthModal();
+                }
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Search input event listener
+            const searchInput = document.querySelector('#search-input');
+            if (searchInput) {
+                searchInput.addEventListener('input', triggerSearch);
+            }
+
+            // Add animation classes on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.section, .table-container').forEach(el => {
+                observer.observe(el);
+            });
+        });
     </script>
 </body>
 </html>

@@ -1,366 +1,1077 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AlumConnect - Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm" aria-label="Main navigation">
-        <div class="container">
-            <a class="navbar-brand fw-bold fs-4" href="#">AlumConnect</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/student">Student</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/alumni">Alumni</a>
-                    </li>
-                    <li class="nav-item">
-                        <form action="/search" method="post" class="position-relative d-flex align-items-center">
-                            <input type="text" name="query" id="searchInput" class="form-control floating-label-input me-2" placeholder="Search" aria-label="Search">
-                            <label for="searchInput" class="floating-label"></label>
-                            <button type="button" class="btn btn-outline-secondary clear-search d-none" id="clearSearch"><i class="bi bi-x"></i></button>
-                            <button type="submit" class="btn btn-primary">Search</button>
-                        </form>
-                    </li>
-                    <li class="nav-item">
-                        <span class="theme-toggle ms-2 me-2" id="themeToggle" aria-label="Toggle dark mode">
-                            <i class="bi bi-moon-stars-fill"></i>
-                        </span>
-                    </li>
-                </ul>
-            </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AlumConnect - Connecting Students & Alumni</title>
+    <meta name="description" content="AlumConnect bridges the gap between students and alumni, fostering meaningful connections that drive career growth and professional development." />
+    <meta name="author" content="AlumConnect" />
+    <meta name="keywords" content="alumni, students, networking, mentorship, career development" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="AlumConnect - Connecting Students & Alumni" />
+    <meta property="og:description" content="Bridge the gap between students and alumni with meaningful connections for career growth." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://alumconnect.com/assets/og-image.jpg" />
+    <meta property="og:url" content="https://alumconnect.com" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@AlumConnect" />
+    
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+      :root {
+        --background: 0 0% 100%;
+        --foreground: 222.2 84% 4.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 222.2 84% 4.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222.2 84% 4.9%;
+        --primary: 221.2 83.2% 53.3%;
+        --primary-foreground: 210 40% 98%;
+        --secondary: 210 40% 96%;
+        --secondary-foreground: 222.2 84% 4.9%;
+        --muted: 210 40% 96%;
+        --muted-foreground: 215.4 16.3% 46.9%;
+        --accent: 210 40% 96%;
+        --accent-foreground: 222.2 84% 4.9%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 214.3 31.8% 91.4%;
+        --input: 214.3 31.8% 91.4%;
+        --ring: 221.2 83.2% 53.3%;
+        --radius: 0.75rem;
+        --gradient-primary: linear-gradient(135deg, hsl(221.2 83.2% 53.3%), hsl(262.1 83.3% 57.8%));
+        --gradient-hero: linear-gradient(135deg, hsl(221.2 83.2% 53.3%) 0%, hsl(262.1 83.3% 57.8%) 100%);
+        --shadow-elegant: 0 10px 30px -10px hsl(221.2 83.2% 53.3% / 0.3);
+        --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .dark {
+        --background: 222.2 84% 4.9%;
+        --foreground: 210 40% 98%;
+        --card: 222.2 84% 4.9%;
+        --card-foreground: 210 40% 98%;
+        --popover: 222.2 84% 4.9%;
+        --popover-foreground: 210 40% 98%;
+        --primary: 217.2 91.2% 59.8%;
+        --primary-foreground: 222.2 84% 4.9%;
+        --secondary: 217.2 32.6% 17.5%;
+        --secondary-foreground: 210 40% 98%;
+        --muted: 217.2 32.6% 17.5%;
+        --muted-foreground: 215 20.2% 65.1%;
+        --accent: 217.2 32.6% 17.5%;
+        --accent-foreground: 210 40% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 210 40% 98%;
+        --border: 217.2 32.6% 17.5%;
+        --input: 217.2 32.6% 17.5%;
+        --ring: 224.3 76.3% 94.1%;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background-color: hsl(var(--background));
+        color: hsl(var(--foreground));
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* Navigation */
+      .navbar {
+        background: hsl(var(--primary));
+        padding: 1rem 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        box-shadow: var(--shadow-elegant);
+      }
+
+      .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        color: hsl(var(--primary-foreground));
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 700;
+        gap: 0.5rem;
+      }
+
+      .nav-brand:hover {
+        color: hsl(var(--primary-foreground) / 0.9);
+      }
+
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+      }
+
+      .nav-link {
+        color: hsl(var(--primary-foreground));
+        text-decoration: none;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        transition: var(--transition-smooth);
+      }
+
+      .nav-link:hover {
+        background: hsl(var(--primary-foreground) / 0.1);
+      }
+
+      .nav-auth {
+        display: flex;
+        gap: 0.75rem;
+      }
+
+      .btn {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        border: none;
+        font-weight: 500;
+        cursor: pointer;
+        transition: var(--transition-smooth);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.875rem;
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: hsl(var(--primary-foreground));
+        border: 1px solid hsl(var(--primary-foreground));
+      }
+
+      .btn-outline:hover {
+        background: hsl(var(--primary-foreground));
+        color: hsl(var(--primary));
+      }
+
+      .btn-primary {
+        background: hsl(var(--primary-foreground));
+        color: hsl(var(--primary));
+      }
+
+      .btn-primary:hover {
+        background: hsl(var(--primary-foreground) / 0.9);
+      }
+
+      .btn-gradient {
+        background: var(--gradient-primary);
+        color: white;
+        border: none;
+      }
+
+      .btn-gradient:hover {
+        background: linear-gradient(135deg, hsl(221.2 83.2% 48.3%), hsl(262.1 83.3% 52.8%));
+      }
+
+      .btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        color: hsl(var(--primary-foreground));
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      /* Hero Section */
+      .hero {
+        background: var(--gradient-hero);
+        color: white;
+        padding: 8rem 1rem 6rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        animation: fadeInUp 1s ease-out;
+      }
+
+      .hero p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        animation: fadeInUp 1s ease-out 0.2s both;
+      }
+
+      .hero .btn {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        animation: fadeInUp 1s ease-out 0.4s both;
+      }
+
+      /* Sections */
+      .section {
+        padding: 5rem 1rem;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: hsl(var(--foreground));
+      }
+
+      .section-subtitle {
+        text-align: center;
+        font-size: 1.25rem;
+        color: hsl(var(--muted-foreground));
+        margin-bottom: 4rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* How To Section */
+      .how-to {
+        background: hsl(var(--secondary) / 0.5);
+      }
+
+      .tabs {
+        margin-bottom: 3rem;
+      }
+
+      .tab-list {
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
+        background: hsl(var(--muted));
+        padding: 0.5rem;
+        border-radius: 0.75rem;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .tab-trigger {
+        padding: 0.75rem 1.5rem;
+        border: none;
+        background: transparent;
+        color: hsl(var(--muted-foreground));
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: var(--transition-smooth);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-weight: 500;
+      }
+
+      .tab-trigger.active {
+        background: hsl(var(--background));
+        color: hsl(var(--foreground));
+        box-shadow: 0 2px 4px hsl(0 0% 0% / 0.1);
+      }
+
+      .tab-content {
+        display: none;
+      }
+
+      .tab-content.active {
+        display: block;
+        animation: fadeIn 0.3s ease-out;
+      }
+
+      /* Cards Grid */
+      .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+      }
+
+      .card {
+        background: hsl(var(--card));
+        border-radius: var(--radius);
+        padding: 2rem;
+        text-align: center;
+        box-shadow: 0 4px 12px hsl(0 0% 0% / 0.1);
+        transition: var(--transition-smooth);
+        border: 1px solid hsl(var(--border));
+        cursor: pointer;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-elegant);
+      }
+
+      .card-icon {
+        font-size: 4rem;
+        color: hsl(var(--primary));
+        margin-bottom: 1.5rem;
+        display: block;
+      }
+
+      .card h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: hsl(var(--foreground));
+      }
+
+      .card p {
+        color: hsl(var(--muted-foreground));
+        margin-bottom: 2rem;
+      }
+
+      .step-number {
+        background: hsl(var(--primary));
+        color: hsl(var(--primary-foreground));
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        margin: 0 auto 1rem;
+        font-size: 1.25rem;
+      }
+
+      /* Stats */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        margin-top: 4rem;
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: hsl(var(--primary));
+        margin-bottom: 0.5rem;
+      }
+
+      .stat-label {
+        color: hsl(var(--muted-foreground));
+      }
+
+      /* Modal */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: hsl(0 0% 0% / 0.5);
+        z-index: 2000;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .modal.show {
+        display: flex;
+        animation: fadeIn 0.3s ease-out;
+      }
+
+      .modal-content {
+        background: hsl(var(--background));
+        border-radius: var(--radius);
+        padding: 2rem;
+        max-width: 400px;
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+        position: relative;
+        animation: slideIn 0.3s ease-out;
+      }
+
+      .modal-header {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .modal-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: hsl(var(--foreground));
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: hsl(var(--muted-foreground));
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+        color: hsl(var(--foreground));
+      }
+
+      .form-input {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        border: 1px solid hsl(var(--border));
+        border-radius: 0.5rem;
+        background: hsl(var(--background));
+        color: hsl(var(--foreground));
+        transition: var(--transition-smooth);
+      }
+
+      .form-input:focus {
+        outline: none;
+        border-color: hsl(var(--primary));
+        box-shadow: 0 0 0 3px hsl(var(--primary) / 0.1);
+      }
+
+      .form-input-icon {
+        position: relative;
+      }
+
+      .form-input-icon input {
+        padding-left: 2.5rem;
+      }
+
+      .form-icon {
+        position: absolute;
+        left: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: hsl(var(--muted-foreground));
+      }
+
+      /* Footer */
+      .footer {
+        background: hsl(var(--muted));
+        padding: 3rem 1rem 2rem;
+        text-align: center;
+        margin-top: 4rem;
+      }
+
+      .footer p {
+        color: hsl(var(--muted-foreground));
+        margin-bottom: 1rem;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .footer-link {
+        color: hsl(var(--muted-foreground));
+        text-decoration: none;
+        font-size: 1.25rem;
+        transition: var(--transition-smooth);
+      }
+
+      .footer-link:hover {
+        color: hsl(var(--primary));
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .nav-menu {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: hsl(var(--primary));
+          padding: 1rem;
+          gap: 1rem;
+        }
+
+        .nav-menu.show {
+          display: flex;
+        }
+
+        .mobile-menu-btn {
+          display: block;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .tab-list {
+          flex-direction: column;
+          max-width: 200px;
+        }
+
+        .cards-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .stats {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* Icons */
+      .icon {
+        width: 1em;
+        height: 1em;
+        display: inline-block;
+        fill: currentColor;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="#" class="nav-brand">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3.5 13h17v2h-17v-2zm0 3h17v2h-17v-2zm0-6h17v2h-17v-2zm0-3h17v2h-17v-2z"/>
+          </svg>
+          AlumConnect
+        </a>
+        
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#" class="nav-link">Home</a></li>
+          <li><a href="/student" class="nav-link">Student Portal</a></li>
+          <li><a href="/alumni" class="nav-link">Alumni Portal</a></li>
+          <li class="nav-auth">
+            <button class="btn btn-outline" onclick="openAuthModal('login')" aria-label="Open login modal">Login</button>
+            <button class="btn btn-primary" onclick="openAuthModal('register')" aria-label="Open registration modal">Register</button>
+          </li>
+        </ul>
+        
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">☰</button>
+      </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-section text-white text-center">
-        <div class="container">
-            <h1 class="display-4 fw-bold">Welcome to AlumConnect</h1>
-            <p class="lead mt-3 mb-4">Connecting students & alumni for a brighter future.</p>
-            <a href="#" class="btn btn-light btn-lg">Join Now</a>
-        </div>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">Bridge the Gap Between Students & Alumni</h1>
+        <p>Connect, learn, and grow through meaningful mentorship relationships that shape the future of education and careers.</p>
+        <button class="btn btn-primary" onclick="scrollToSection('get-started')" aria-label="Get started with AlumConnect">Get Started</button>
+      </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Get Started</h2>
-            <div class="row g-4" id="roleCards">
-                <div class="col-md-4">
-                    <div class="card h-100 text-center">
-                        <div class="card-body">
-                            <i class="bi bi-mortarboard-fill display-4 text-primary mb-3"></i>
-                            <h5 class="card-title">As a Student</h5>
-                            <p class="card-text">Connect with alumni, explore opportunities, and grow your network.</p>
-                            <button class="btn btn-outline-primary role-btn" data-role="student" data-bs-toggle="modal" data-bs-target="#authModal">Explore as Student</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 text-center">
-                        <div class="card-body">
-                            <i class="bi bi-briefcase-fill display-4 text-primary mb-3"></i>
-                            <h5 class="card-title">As an Alumnus</h5>
-                            <p class="card-text">Mentor students, share experiences, and give back to your community.</p>
-                            <button class="btn btn-outline-primary role-btn" data-role="alumni" data-bs-toggle="modal" data-bs-target="#authModal">Connect as Alumni</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 text-center">
-                        <div class="card-body">
-                            <i class="bi bi-person-fill display-4 text-primary mb-3"></i>
-                            <h5 class="card-title">As a Visitor</h5>
-                            <p class="card-text">Discover our community and see how you can get involved.</p>
-                            <button class="btn btn-outline-primary role-btn" data-role="visitor">Join as Visitor</button>
-                        </div>
-                    </div>
-                </div>
+    <!-- How To Section -->
+    <section class="section how-to" aria-labelledby="how-to-title">
+      <div class="container">
+        <h2 class="section-title" id="how-to-title">How to Get Started</h2>
+        <p class="section-subtitle">Choose your path and discover how AlumConnect can help you achieve your goals.</p>
+        
+        <div class="tabs">
+          <div class="tab-list" role="tablist">
+            <button class="tab-trigger active" data-tab="students" role="tab" aria-selected="true" aria-controls="students">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3L1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/>
+              </svg>
+              Students
+            </button>
+            <button class="tab-trigger" data-tab="alumni" role="tab" aria-selected="false" aria-controls="alumni">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M10 16v-1H3.5l6-6.5 1.5 1.5L16.5 4H15V2h5v5h-2V5.5l-6.5 6.5 -1.5-1.5L4.5 16H10zm2 0h2v6h-2v-6z"/>
+              </svg>
+              Alumni
+            </button>
+            <button class="tab-trigger" data-tab="visitors" role="tab" aria-selected="false" aria-controls="visitors">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H16c-.8 0-1.54.37-2.01 1l-1.07 1.42A1 1 0 0 0 13.73 12H15l1.5 2.25V22h-2.5z"/>
+              </svg>
+              Visitors
+            </button>
+          </div>
+          
+          <div class="tab-content active" id="students" role="tabpanel">
+            <div class="cards-grid">
+              <div class="card">
+                <div class="step-number">1</div>
+                <h3>Register with College Email</h3>
+                <p>Sign up using your official college email to verify your student status.</p>
+              </div>
+              <div class="card">
+                <div class="step-number">2</div>
+                <h3>Build Your Profile</h3>
+                <p>Add your interests, academic goals, and career aspirations.</p>
+              </div>
+              <div class="card">
+                <div class="step-number">3</div>
+                <h3>Connect with Alumni</h3>
+                <p>Browse the alumni directory and connect with professionals in your field.</p>
+              </div>
             </div>
+          </div>
+          
+          <div class="tab-content" id="alumni" role="tabpanel">
+            <div class="cards-grid">
+              <div class="card">
+                <div class="step-number">1</div>
+                <h3>Join the Network</h3>
+                <p>Register with your professional email or LinkedIn profile.</p>
+              </div>
+              <div class="card">
+                <div class="step-number">2</div>
+                <h3>Share Your Journey</h3>
+                <p>Update your profile with career achievements and experiences.</p>
+              </div>
+              <div class="card">
+                <div class="step-number">3</div>
+                <h3>Mentor & Guide</h3>
+                <p>Connect with students and share valuable career insights.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="tab-content" id="visitors" role="tabpanel">
+            <div class="cards-grid">
+              <div class="card">
+                <div class="step-number">1</div>
+                <h3>Explore Freely</h3>
+                <p>No registration required! Browse public achievements and updates.</p>
+              </div>
+              <div class="card">
+                <div class="step-number">2</div>
+                <h3>Discover Stories</h3>
+                <p>Read inspiring success stories from our community members.</p>
+              </div>
+              <div class="card">
+                <div class="step-number">3</div>
+                <h3>Join When Ready</h3>
+                <p>Sign up as a student or alumni when you're ready to connect.</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- Authentication Modal -->
-    <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="authModalLabel">Login or Register</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="row">
-                            <!-- Login Form -->
-                            <div class="col-md-6 mb-4">
-                                <h4 class="mb-4 text-center" id="loginTitle">Login</h4>
-                                <form id="loginForm">
-                                    <div class="mb-3">
-                                        <label for="loginEmail" class="form-label">Email address</label>
-                                        <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email" required />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="loginPassword" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password" required />
-                                    </div>
-                                    <button type="submit" class="btn btn-primary w-100">Login</button>
-                                </form>
-                            </div>
-                            <!-- Registration Form -->
-                            <div class="col-md-6 mb-4">
-                                <h4 class="mb-4 text-center" id="registerTitle">Register</h4>
-                                <form id="registerForm">
-                                    <div class="mb-3">
-                                        <label for="registerName" class="form-label">Name</label>
-                                        <input type="text" class="form-control" id="registerName" placeholder="Enter your full name" required />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="registerEmail" class="form-label">Email address</label>
-                                        <input type="email" class="form-control" id="registerEmail" placeholder="Enter your email" required />
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="registerPassword" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="registerPassword" placeholder="Create a password" required />
-                                    </div>
-                                    <button type="submit" class="btn btn-success w-100">Register</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Get Started Section -->
+    <section class="section" id="get-started" aria-labelledby="get-started-title">
+      <div class="container">
+        <h2 class="section-title" id="get-started-title">Choose Your Path</h2>
+        <p class="section-subtitle">Join thousands of students and alumni building meaningful connections and creating opportunities together.</p>
+        
+        <div class="cards-grid">
+          <div class="card" onclick="openAuthModal('register', 'student')">
+            <span class="card-icon">🎓</span>
+            <h3>Student Dashboard</h3>
+            <p>Connect with alumni, explore opportunities, and grow your professional network.</p>
+            <button class="btn btn-gradient" aria-label="Enter student portal">Enter Student Portal →</button>
+          </div>
+          
+          <div class="card" onclick="openAuthModal('register', 'alumni')">
+            <span class="card-icon">💼</span>
+            <h3>Alumni Portal</h3>
+            <p>Mentor students, share experiences, and give back to your community.</p>
+            <button class="btn btn-gradient" aria-label="Enter alumni portal">Enter Alumni Portal →</button>
+          </div>
+          
+          <div class="card" onclick="exploreAsVisitor()">
+            <span class="card-icon">👥</span>
+            <h3>Visitor Access</h3>
+            <p>Discover our community and see how you can get involved.</p>
+            <button class="btn btn-gradient" aria-label="Explore as visitor">Explore as Visitor →</button>
+          </div>
         </div>
-    </div>
-
-    <!-- Visitor Welcome Section -->
-    <div class="container" id="visitorSection" style="display: none;">
-        <div class="card p-4 mx-auto mt-5" style="max-width: 480px;">
-            <h3 class="text-center mb-3">Welcome, Visitor!</h3>
-            <p class="text-center mb-0">You can explore AlumConnect as a guest without logging in.</p>
+        
+        <!-- Stats Section -->
+        <div class="stats">
+          <div>
+            <div class="stat-number">10K+</div>
+            <div class="stat-label">Active Members</div>
+          </div>
+          <div>
+            <div class="stat-number">5K+</div>
+            <div class="stat-label">Connections Made</div>
+          </div>
+          <div>
+            <div class="stat-number">2K+</div>
+            <div class="stat-label">Career Opportunities</div>
+          </div>
+          <div>
+            <div class="stat-number">95%</div>
+            <div class="stat-label">Success Rate</div>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p class="mb-2">&copy; 2025 AlumConnect. All rights reserved.</p>
-            <div class="d-flex justify-content-center gap-3">
-                <a href="#" class="text-muted"><i class="bi bi-github"></i></a>
-                <a href="#" class="text-muted"><i class="bi bi-linkedin"></i></a>
-                <a href="#" class="text-muted"><i class="bi bi-twitter"></i></a>
-            </div>
+    <footer class="footer" aria-label="Footer">
+      <div class="container">
+        <p>&copy; 2025 AlumConnect. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#" class="footer-link" aria-label="Email us">📧</a>
+          <a href="#" class="footer-link" aria-label="LinkedIn profile">💼</a>
+          <a href="#" class="footer-link" aria-label="Twitter profile">🐦</a>
         </div>
+      </div>
     </footer>
 
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #f8f9fa;
-            --text-color: #1f2937;
-            --bg-color: #ffffff;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+    <!-- Auth Modal -->
+    <div class="modal" id="authModal" role="dialog" aria-labelledby="modal-title">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeAuthModal()" aria-label="Close modal">×</button>
+        <div class="modal-header">
+          <h2 class="modal-title" id="modal-title">Welcome to AlumConnect</h2>
+        </div>
+        
+        <div class="tabs">
+          <div class="tab-list" role="tablist">
+            <button class="tab-trigger active" data-tab="login" role="tab" aria-selected="true" aria-controls="login">Login</button>
+            <button class="tab-trigger" data-tab="register" role="tab" aria-selected="false" aria-controls="register">Register</button>
+          </div>
+          
+          <div class="tab-content active" id="login" role="tabpanel">
+            <form onsubmit="handleAuth(event, 'login')" aria-label="Login form">
+              <div class="form-group">
+                <label class="form-label" for="login-email">Email address</label>
+                <div class="form-input-icon">
+                  <input type="email" class="form-input" id="login-email" placeholder="Enter your email" required aria-required="true">
+                  <span class="form-icon" aria-hidden="true">📧</span>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="login-password">Password</label>
+                <div class="form-input-icon">
+                  <input type="password" class="form-input" id="login-password" placeholder="Enter your password" required aria-required="true">
+                  <span class="form-icon" aria-hidden="true">🔒</span>
+                </div>
+              </div>
+              
+              <button type="submit" class="btn btn-gradient" style="width: 100%;" id="login-submit" aria-label="Submit login">Login</button>
+            </form>
+          </div>
+          
+          <div class="tab-content" id="register" role="tabpanel">
+            <form onsubmit="handleAuth(event, 'register')" aria-label="Registration form">
+              <div class="form-group">
+                <label class="form-label" for="register-name">Full Name</label>
+                <div class="form-input-icon">
+                  <input type="text" class="form-input" id="register-name" placeholder="Enter your full name" required aria-required="true">
+                  <span class="form-icon" aria-hidden="true">👤</span>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="register-email">Email address</label>
+                <div class="form-input-icon">
+                  <input type="email" class="form-input" id="register-email" placeholder="Enter your email" required aria-required="true">
+                  <span class="form-icon" aria-hidden="true">📧</span>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label" for="register-password">Password</label>
+                <div class="form-input-icon">
+                  <input type="password" class="form-input" id="register-password" placeholder="Create a password" required aria-required="true" minlength="8">
+                  <span class="form-icon" aria-hidden="true">🔒</span>
+                </div>
+              </div>
+              
+              <button type="submit" class="btn btn-gradient" style="width: 100%;" id="register-submit" aria-label="Submit registration">Create Account</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        [data-theme="dark"] {
-            --primary-color: #60a5fa;
-            --secondary-color: #374151;
-            --text-color: #e5e7eb;
-            --bg-color: #1f2937;
-        }
+    <script>
+      // Global variables
+      let currentRole = null;
+      let isSubmitting = false;
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'Inter', sans-serif;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
+      // Navigation functions
+      function toggleMobileMenu() {
+        const navMenu = document.getElementById('navMenu');
+        navMenu.classList.toggle('show');
+        const isExpanded = navMenu.classList.contains('show');
+        document.querySelector('.mobile-menu-btn').setAttribute('aria-expanded', isExpanded);
+      }
 
-        .navbar {
-            background: var(--primary-color);
-            box-shadow: var(--shadow);
+      function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
+      }
 
-        .navbar-brand {
-            letter-spacing: 1px;
-            color: #fff !important;
-        }
+      // Tab functionality
+      function initTabs() {
+        const tabTriggers = document.querySelectorAll('.tab-trigger');
+        const tabContents = document.querySelectorAll('.tab-content');
 
-        .navbar-brand:hover {
-            color: #f0f0f0 !important;
-        }
+        tabTriggers.forEach(trigger => {
+          trigger.addEventListener('click', () => {
+            const targetTab = trigger.getAttribute('data-tab');
+            const parentTabs = trigger.closest('.tabs');
 
-        .nav-link {
-            color: #fff !important;
-            padding: 10px 15px !important;
-            border-radius: 5px;
-            transition: background-color 0.2s ease;
-        }
+            // Remove active class from all triggers and contents in this tab group
+            parentTabs.querySelectorAll('.tab-trigger').forEach(t => {
+              t.classList.remove('active');
+              t.setAttribute('aria-selected', 'false');
+            });
+            parentTabs.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
 
-        .nav-link:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .nav-link.active {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .btn-outline-light {
-            border-color: #fff;
-            color: #fff;
-        }
-
-        .btn-outline-light:hover {
-            background-color: #fff;
-            color: var(--primary-color);
-        }
-
-        .form-control {
-            background-color: var(--secondary-color);
-            color: var(--text-color);
-            transition: all 0.3s ease;
-        }
-
-        .form-control:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 0.25rem rgba(37, 99, 235, 0.25);
-        }
-
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            transition: all 0.2s ease;
-        }
-
-        .btn-primary:hover {
-            background-color: #1d4ed8;
-            border-color: #1e40af;
-        }
-
-        .btn-outline-primary {
-            transition: all 0.2s ease;
-        }
-
-        .btn-outline-primary:hover {
-            background-color: var(--primary-color);
-            color: #fff;
-        }
-
-        .floating-label-input {
-            padding-top: 1.5rem;
-            padding-bottom: 0.5rem;
-        }
-
-        .floating-label {
-            position: absolute;
-            top: 50%;
-            left: 1rem;
-            transform: translateY(-50%);
-            color: #6c757d;
-            pointer-events: none;
-            transition: all 0.2s ease;
-        }
-
-        .floating-label-input:focus + .floating-label,
-        .floating-label-input:not(:placeholder-shown) + .floating-label {
-            top: 0.5rem;
-            font-size: 0.75rem;
-            color: var(--primary-color);
-        }
-
-        .clear-search {
-            position: absolute;
-            right: 6rem;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary-color), #1e40af);
-            padding: 5rem 0;
-            animation: fadeIn 1s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .hero-section h1, .hero-section p {
-            animation: fadeIn 1s ease-in;
-        }
-
-        .card {
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow);
-        }
-
-        .selected-btn {
-            color: #fff !important;
-            background-color: var(--primary-color) !important;
-            border-color: var(--primary-color) !important;
-        }
-
-        .selected-visitor-btn {
-            color: #fff !important;
-            background-color: #6c757d !important;
-            border-color: #6c757d !important;
-        }
-
-        footer {
-            background-color: var(--secondary-color);
-            padding: 20px 0;
-            text-align: center;
-            margin-top: 40px;
-            box-shadow: var(--shadow);
-        }
-
-        .theme-toggle {
-            cursor: pointer;
-            font-size: 1.2rem;
-        }
-
-        @media (max-width: 768px) {
-            .form-control {
-                font-size: 0.9rem;
+            // Add active class to clicked trigger and corresponding content
+            trigger.classList.add('active');
+            trigger.setAttribute('aria-selected', 'true');
+            const targetContent = parentTabs.querySelector(`#${targetTab}`);
+            if (targetContent) {
+              targetContent.classList.add('active');
             }
-            .btn-primary, .btn-outline-secondary {
-                padding: 0.5rem 1rem;
-            }
-            .floating-label {
-                left: 0.75rem;
-            }
-            .clear-search {
-                right: 5rem;
-            }
-            .card {
-                margin-bottom: 1rem;
-            }
+          });
+        });
+      }
+
+      // Modal functions
+      function openAuthModal(mode = 'login', role = null) {
+        currentRole = role;
+        const modal = document.getElementById('authModal');
+        const modalTabs = modal.querySelectorAll('.tab-trigger');
+        const modalContents = modal.querySelectorAll('.tab-content');
+
+        // Reset tabs
+        modalTabs.forEach(t => {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        modalContents.forEach(c => c.classList.remove('active'));
+
+        // Set active tab
+        const targetTrigger = modal.querySelector(`[data-tab="${mode}"]`);
+        const targetContent = modal.querySelector(`#${mode}`);
+        
+        if (targetTrigger && targetContent) {
+          targetTrigger.classList.add('active');
+          targetTrigger.setAttribute('aria-selected', 'true');
+          targetContent.classList.add('active');
         }
 
-        .modal-content {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-        }
-    </style>
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+        modal.querySelector('.form-input').focus();
+      }
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="homepage.js"></script>
-</body>
+      function closeAuthModal() {
+        const modal = document.getElementById('authModal');
+        modal.classList.remove('show');
+        document.body.style.overflow = '';
+        currentRole = null;
+        isSubmitting = false;
+        // Reset form states
+        document.querySelectorAll('.btn-gradient').forEach(btn => btn.disabled = false);
+      }
+
+      function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+      }
+
+      function validatePassword(password) {
+        return password.length >= 8;
+      }
+
+      function handleAuth(event, type) {
+        event.preventDefault();
+        
+        if (isSubmitting) return;
+        isSubmitting = true;
+        
+        const form = event.target;
+        const submitButton = form.querySelector('.btn-gradient');
+        submitButton.disabled = true;
+
+        if (type === 'register') {
+          const name = form.querySelector('#register-name').value.trim();
+          const email = form.querySelector('#register-email').value.trim();
+          const password = form.querySelector('#register-password').value;
+
+          if (!name) {
+            alert('Please enter your full name');
+            isSubmitting = false;
+            submitButton.disabled = false;
+            return;
+          }
+
+          if (!validateEmail(email)) {
+            alert('Please enter a valid email address');
+            isSubmitting = false;
+            submitButton.disabled = false;
+            return;
+          }
+
+          if (!validatePassword(password)) {
+            alert('Password must be at least 8 characters long');
+            isSubmitting = false;
+            submitButton.disabled = false;
+            return;
+          }
+        } else {
+          const email = form.querySelector('#login-email').value.trim();
+          const password = form.querySelector('#login-password').value;
+
+          if (!validateEmail(email)) {
+            alert('Please enter a valid email address');
+            isSubmitting = false;
+            submitButton.disabled = false;
+            return;
+          }
+
+          if (!password) {
+            alert('Please enter your password');
+            isSubmitting = false;
+            submitButton.disabled = false;
+            return;
+          }
+        }
+
+        console.log(`${type} submitted for role: ${currentRole || 'general'}`);
+        
+        // Here you would typically handle the authentication
+        // For demo purposes, we'll just close the modal
+        closeAuthModal();
+        
+        // Show success message
+        alert(`${type === 'login' ? 'Login' : 'Registration'} successful!`);
+      }
+
+      function exploreAsVisitor() {
+        alert('Welcome, Visitor! You can explore AlumConnect as a guest without logging in.');
+      }
+
+      // Event listeners
+      document.addEventListener('DOMContentLoaded', function() {
+        initTabs();
+
+        // Close modal when clicking outside
+        document.getElementById('authModal').addEventListener('click', function(e) {
+          if (e.target === this) {
+            closeAuthModal();
+          }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeAuthModal();
+          }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth' });
+            }
+          });
+        });
+
+        // Add animation classes on scroll
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+            }
+          });
+        }, observerOptions);
+
+        // Observe cards and sections
+        document.querySelectorAll('.card, .section').forEach(el => {
+          observer.observe(el);
+        });
+      });
+    </script>
+  </body>
 </html>
