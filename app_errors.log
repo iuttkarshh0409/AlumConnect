@@ -1,0 +1,195 @@
+2025-08-07 23:04:37,731 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:04:37,731 INFO: [33mPress CTRL+C to quit[0m [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:04:37,732 INFO:  * Restarting with stat [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:04:38,180 WARNING:  * Debugger is active! [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:04:38,187 INFO:  * Debugger PIN: 579-830-327 [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:04:54,540 INFO: 127.0.0.1 - - [07/Aug/2025 23:04:54] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:06:23,039 INFO: 127.0.0.1 - - [07/Aug/2025 23:06:23] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:06:45,500 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:06:45,501 INFO: [33mPress CTRL+C to quit[0m [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:06:45,504 INFO:  * Restarting with stat [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:06:45,859 WARNING:  * Debugger is active! [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:06:45,862 INFO:  * Debugger PIN: 579-830-327 [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:09:16,393 INFO:  * Detected change in 'C:\\Users\\dubey\\Desktop\\Personal Vault\\Projects\\AlumConnect\\test_insert.py', reloading [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:09:16,512 INFO:  * Restarting with stat [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:09:17,317 WARNING:  * Debugger is active! [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:09:17,320 INFO:  * Debugger PIN: 579-830-327 [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:14:59,132 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:14:59,132 INFO: [33mPress CTRL+C to quit[0m [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:14:59,134 INFO:  * Restarting with stat [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:14:59,480 WARNING:  * Debugger is active! [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:14:59,485 INFO:  * Debugger PIN: 579-830-327 [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:15:14,497 INFO: 127.0.0.1 - - [07/Aug/2025 23:15:14] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:15:14,593 INFO: 127.0.0.1 - - [07/Aug/2025 23:15:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:18:24,053 INFO: 127.0.0.1 - - [07/Aug/2025 23:18:24] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:18:24,154 INFO: 127.0.0.1 - - [07/Aug/2025 23:18:24] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:18:51,516 INFO: 127.0.0.1 - - [07/Aug/2025 23:18:51] "[32mPOST /register HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:18:51,533 INFO: 127.0.0.1 - - [07/Aug/2025 23:18:51] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:18:51,586 INFO: 127.0.0.1 - - [07/Aug/2025 23:18:51] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:20:15,294 INFO: 127.0.0.1 - - [07/Aug/2025 23:20:15] "[32mPOST /register HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:20:15,305 INFO: 127.0.0.1 - - [07/Aug/2025 23:20:15] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:20:15,380 INFO: 127.0.0.1 - - [07/Aug/2025 23:20:15] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:22:10,201 INFO: 127.0.0.1 - - [07/Aug/2025 23:22:10] "[33mPOST /login HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:22:10,276 INFO: 127.0.0.1 - - [07/Aug/2025 23:22:10] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:22:10,922 INFO: 127.0.0.1 - - [07/Aug/2025 23:22:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:22:14,646 INFO: 127.0.0.1 - - [07/Aug/2025 23:22:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:22:14,671 INFO: 127.0.0.1 - - [07/Aug/2025 23:22:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:25:48,858 INFO:  * Detected change in 'C:\\Users\\dubey\\Desktop\\Personal Vault\\Projects\\AlumConnect\\app.py', reloading [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:25:49,540 INFO:  * Restarting with stat [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:25:50,945 WARNING:  * Debugger is active! [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:25:50,954 INFO:  * Debugger PIN: 579-830-327 [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:30:14,134 INFO: 127.0.0.1 - - [07/Aug/2025 23:30:14] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:30:14,273 INFO: 127.0.0.1 - - [07/Aug/2025 23:30:14] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:30:31,879 INFO: 127.0.0.1 - - [07/Aug/2025 23:30:31] "[32mPOST /login HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:30:31,974 INFO: 127.0.0.1 - - [07/Aug/2025 23:30:31] "GET /student HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:30:32,107 INFO: 127.0.0.1 - - [07/Aug/2025 23:30:32] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:19,331 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:19] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:19,419 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:19] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:21,473 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:21] "GET /student HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:21,562 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:21] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:24,037 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:24] "[32mGET /alumni HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:24,055 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:24] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:24,159 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:24] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:26,182 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:26] "[32mGET /alumni HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:26,200 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:26] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:26,256 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:26] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:27,680 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:27] "GET /student HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:27,840 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:27] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:29,776 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:29] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:29,941 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:29] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:33,101 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:33] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:33,149 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:33] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:35,488 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:35] "GET /student HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:35,683 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:35] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:37,895 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:37] "[32mGET /alumni HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:37,912 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:37] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:38,112 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:39,426 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:39] "[32mGET /alumni HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:39,448 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:39] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:36:39,578 INFO: 127.0.0.1 - - [07/Aug/2025 23:36:39] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:41:54,437 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:41:54,437 INFO: [33mPress CTRL+C to quit[0m [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:41:54,439 INFO:  * Restarting with stat [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:41:55,039 WARNING:  * Debugger is active! [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:41:55,047 INFO:  * Debugger PIN: 579-830-327 [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:43:02,050 INFO:  * Detected change in 'C:\\Users\\dubey\\Desktop\\Personal Vault\\Projects\\AlumConnect\\app.py', reloading [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:43:02,193 INFO:  * Restarting with stat [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:43:02,923 WARNING:  * Debugger is active! [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:43:02,927 INFO:  * Debugger PIN: 579-830-327 [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:43:03,976 INFO:  * Detected change in 'C:\\Users\\dubey\\Desktop\\Personal Vault\\Projects\\AlumConnect\\app.py', reloading [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:43:04,082 INFO:  * Restarting with stat [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:43:14,805 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:43:14,805 INFO: [33mPress CTRL+C to quit[0m [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:43:14,806 INFO:  * Restarting with stat [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:43:15,161 WARNING:  * Debugger is active! [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:43:15,164 INFO:  * Debugger PIN: 579-830-327 [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:43:31,613 INFO: 127.0.0.1 - - [07/Aug/2025 23:43:31] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:44:28,288 INFO: 127.0.0.1 - - [07/Aug/2025 23:44:28] "[32mPOST /register HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:44:28,298 INFO: 127.0.0.1 - - [07/Aug/2025 23:44:28] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:45:13,011 INFO: 127.0.0.1 - - [07/Aug/2025 23:45:13] "[32mPOST /login HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:45:13,059 INFO: 127.0.0.1 - - [07/Aug/2025 23:45:13] "GET /student HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:45:18,150 INFO: 127.0.0.1 - - [07/Aug/2025 23:45:18] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:45:53,025 INFO: 127.0.0.1 - - [07/Aug/2025 23:45:53] "[32mPOST /register HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:45:53,033 INFO: 127.0.0.1 - - [07/Aug/2025 23:45:53] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:46:22,977 INFO: 127.0.0.1 - - [07/Aug/2025 23:46:22] "[32mPOST /login HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:46:23,035 INFO: 127.0.0.1 - - [07/Aug/2025 23:46:23] "GET /alumni HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-07 23:49:24,482 INFO: 127.0.0.1 - - [07/Aug/2025 23:49:24] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:34:54,789 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:34:54,789 INFO: [33mPress CTRL+C to quit[0m [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:34:54,790 INFO:  * Restarting with stat [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:34:55,189 WARNING:  * Debugger is active! [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:34:55,193 INFO:  * Debugger PIN: 102-468-911 [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:35:05,266 INFO: 127.0.0.1 - - [08/Aug/2025 11:35:05] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:35:06,435 INFO: 127.0.0.1 - - [08/Aug/2025 11:35:06] "[33mGET /favicon.png HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:35:21,004 INFO: 127.0.0.1 - - [08/Aug/2025 11:35:21] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:35:21,507 INFO: 127.0.0.1 - - [08/Aug/2025 11:35:21] "[33mGET /favicon.png HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:36:01,661 INFO: 127.0.0.1 - - [08/Aug/2025 11:36:01] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:36:02,421 INFO: 127.0.0.1 - - [08/Aug/2025 11:36:02] "[33mGET /favicon.png HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:36:54,334 ERROR: Database error during registration: 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061) [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\app.py:84]
+Traceback (most recent call last):
+  File "C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\mysql\connector\connection_cext.py", line 354, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+_mysql_connector.MySQLInterfaceError: Can't connect to MySQL server on 'localhost:3306' (10061)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\app.py", line 75, in register
+    conn = get_db_connection()
+  File "C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\app.py", line 19, in get_db_connection
+    conn = mysql.connector.connect(
+        host=os.getenv("DB_HOST"),
+    ...<2 lines>...
+        database=os.getenv("DB_NAME")
+    )
+  File "C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\mysql\connector\pooling.py", line 322, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\mysql\connector\connection_cext.py", line 142, in __init__
+    self.connect(**kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\mysql\connector\abstracts.py", line 1604, in connect
+    self._open_connection()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\mysql\connector\connection_cext.py", line 360, in _open_connection
+    raise get_mysql_exception(
+        err.errno, msg=err.msg, sqlstate=err.sqlstate
+    ) from err
+mysql.connector.errors.DatabaseError: 2003 (HY000): Can't connect to MySQL server on 'localhost:3306' (10061)
+2025-08-08 11:36:54,348 INFO: 127.0.0.1 - - [08/Aug/2025 11:36:54] "[32mPOST /register HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:36:54,363 INFO: 127.0.0.1 - - [08/Aug/2025 11:36:54] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:37:32,390 INFO: 127.0.0.1 - - [08/Aug/2025 11:37:32] "[35m[1mPOST /login HTTP/1.1[0m" 500 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:37:32,750 INFO: 127.0.0.1 - - [08/Aug/2025 11:37:32] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:37:32,757 INFO: 127.0.0.1 - - [08/Aug/2025 11:37:32] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:37:32,815 INFO: 127.0.0.1 - - [08/Aug/2025 11:37:32] "GET /login?__debugger__=yes&cmd=resource&f=console.png&s=IogvW0VZ1fDuzCjBWspz HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:37:32,923 INFO: 127.0.0.1 - - [08/Aug/2025 11:37:32] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:38:01,655 INFO: 127.0.0.1 - - [08/Aug/2025 11:38:01] "[32mPOST /login HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:38:01,665 INFO: 127.0.0.1 - - [08/Aug/2025 11:38:01] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:38:20,645 INFO: 127.0.0.1 - - [08/Aug/2025 11:38:20] "[32mPOST /login HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:38:20,653 INFO: 127.0.0.1 - - [08/Aug/2025 11:38:20] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:38:29,443 INFO: 127.0.0.1 - - [08/Aug/2025 11:38:29] "[32mGET /alumni HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:38:29,457 INFO: 127.0.0.1 - - [08/Aug/2025 11:38:29] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:38:31,299 INFO: 127.0.0.1 - - [08/Aug/2025 11:38:31] "[32mGET /student HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:38:31,312 INFO: 127.0.0.1 - - [08/Aug/2025 11:38:31] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:38:59,171 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:38:59,171 INFO: [33mPress CTRL+C to quit[0m [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:38:59,172 INFO:  * Restarting with stat [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:38:59,521 WARNING:  * Debugger is active! [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:38:59,524 INFO:  * Debugger PIN: 102-468-911 [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:39:05,668 INFO: 127.0.0.1 - - [08/Aug/2025 11:39:05] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:39:22,862 INFO: 127.0.0.1 - - [08/Aug/2025 11:39:22] "[32mPOST /login HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:39:22,873 INFO: 127.0.0.1 - - [08/Aug/2025 11:39:22] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:41:33,093 INFO: 127.0.0.1 - - [08/Aug/2025 11:41:33] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:41:36,110 INFO: 127.0.0.1 - - [08/Aug/2025 11:41:36] "[32mGET /alumni HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:41:36,123 INFO: 127.0.0.1 - - [08/Aug/2025 11:41:36] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:41:38,070 INFO: 127.0.0.1 - - [08/Aug/2025 11:41:38] "[32mGET /student HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:41:38,079 INFO: 127.0.0.1 - - [08/Aug/2025 11:41:38] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:44:36,593 INFO: 127.0.0.1 - - [08/Aug/2025 11:44:36] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:44:37,570 INFO: 127.0.0.1 - - [08/Aug/2025 11:44:37] "[33mGET /favicon.png HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:44:38,891 INFO: 127.0.0.1 - - [08/Aug/2025 11:44:38] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:45:25,253 INFO: 127.0.0.1 - - [08/Aug/2025 11:45:25] "[32mPOST /register HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:45:25,265 INFO: 127.0.0.1 - - [08/Aug/2025 11:45:25] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:45:38,157 INFO: 127.0.0.1 - - [08/Aug/2025 11:45:38] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:49:51,932 INFO:  * Detected change in 'C:\\Users\\dubey\\Desktop\\Personal Vault\\Projects\\AlumConnect\\app.py', reloading [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:49:52,083 INFO:  * Restarting with stat [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:50:04,825 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:50:04,826 INFO: [33mPress CTRL+C to quit[0m [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:50:04,827 INFO:  * Restarting with stat [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:50:05,174 WARNING:  * Debugger is active! [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:50:05,177 INFO:  * Debugger PIN: 102-468-911 [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:50:11,775 INFO: 127.0.0.1 - - [08/Aug/2025 11:50:11] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:50:51,137 INFO: 127.0.0.1 - - [08/Aug/2025 11:50:51] "[32mPOST /register HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:50:51,148 INFO: 127.0.0.1 - - [08/Aug/2025 11:50:51] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:51:00,187 INFO: 127.0.0.1 - - [08/Aug/2025 11:51:00] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:52:19,758 INFO: 127.0.0.1 - - [08/Aug/2025 11:52:19] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:52:20,679 INFO: 127.0.0.1 - - [08/Aug/2025 11:52:20] "[33mGET /favicon.png HTTP/1.1[0m" 404 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:52:39,682 INFO: 127.0.0.1 - - [08/Aug/2025 11:52:39] "[32mPOST /login HTTP/1.1[0m" 302 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]
+2025-08-08 11:52:39,690 INFO: 127.0.0.1 - - [08/Aug/2025 11:52:39] "GET / HTTP/1.1" 200 - [in C:\Users\dubey\Desktop\Personal Vault\Projects\AlumConnect\venv\Lib\site-packages\werkzeug\_internal.py:97]

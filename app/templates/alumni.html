@@ -661,6 +661,42 @@
             display: inline-block;
             fill: currentColor;
         }
+         .flash-messages {
+            max-width: 600px;
+            margin: 100px auto 20px;
+            padding: 0 20px;
+            z-index: 2001;
+            position: relative;
+        }
+        .flash-message {
+            padding: 12px 20px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 0 2px 6px rgba(60,60,60,0.1);
+            color: #222;
+            background: #eee;
+        }
+        .flash-message.success {
+            background: #daf3d2;
+            color: #27692b;
+            border: 1px solid #52a851;
+        }
+        .flash-message.danger {
+            background: #f8d7da;
+            color: #842029;
+            border: 1px solid #dc3545;
+        }
+        .flash-message.warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffc107;
+        }
+        .flash-message.info {
+            background: #cfe2ff;
+            color: #084298;
+            border: 1px solid #0d6efd;
+        }
     </style>
 </head>
 <body>
@@ -689,6 +725,19 @@
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">☰</button>
         </div>
     </nav>
+
+        <!-- Flash messages: This block shows all flashed messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div class="flash-messages" role="region" aria-live="polite" aria-atomic="true">
+        {% for category, message in messages %}
+        <div class="flash-message {{ category }}">
+            {{ message }}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
 
     <!-- Main Content -->
     <section class="section" aria-labelledby="alumni-list-title">

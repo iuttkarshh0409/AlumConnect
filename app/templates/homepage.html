@@ -19,10 +19,10 @@
     <meta name="twitter:site" content="@AlumConnect" />
     
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
     <style>
       :root {
         --background: 0 0% 100%;
@@ -600,6 +600,24 @@
         display: inline-block;
         fill: currentColor;
       }
+
+      .flash-messages { 
+  max-width: 500px; 
+  margin: 80px auto 20px; 
+  padding: 0 16px;
+  z-index: 2001;
+  position: relative;
+}
+.flash-message { 
+  border-radius: 0.5rem; padding: 0.75rem 1.2rem; margin-bottom: 10px; font-weight: 500;
+  background: #e9e9e9; color: #222;
+  box-shadow: 0 2px 6px rgba(60,60,60,0.07);
+}
+.flash-message.success { background: #daf3d2; color: #27692b; }
+.flash-message.danger  { background: #f8d7da; color: #842029; }
+.flash-message.info    { background: #cfe2ff; color: #084298; }
+.flash-message.warning { background: #fff4cd; color: #856404; }
+
     </style>
   </head>
 
@@ -613,7 +631,7 @@
           </svg>
           AlumConnect
         </a>
-        
+
         <ul class="nav-menu" id="navMenu">
           <li><a href="#" class="nav-link">Home</a></li>
           <li><a href="/student" class="nav-link">Student Portal</a></li>
@@ -623,10 +641,21 @@
             <button class="btn btn-primary" onclick="openAuthModal('register')" aria-label="Open registration modal">Register</button>
           </li>
         </ul>
-        
+
         <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">☰</button>
       </div>
     </nav>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class="flash-messages">
+      {% for category, msg in messages %}
+        <div class="flash-message {{ category }}">{{ msg }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
 
     <!-- Hero Section -->
     <section class="hero" aria-labelledby="hero-title">
@@ -642,7 +671,7 @@
       <div class="container">
         <h2 class="section-title" id="how-to-title">How to Get Started</h2>
         <p class="section-subtitle">Choose your path and discover how AlumConnect can help you achieve your goals.</p>
-        
+
         <div class="tabs">
           <div class="tab-list" role="tablist">
             <button class="tab-trigger active" data-tab="students" role="tab" aria-selected="true" aria-controls="students">
@@ -664,7 +693,7 @@
               Visitors
             </button>
           </div>
-          
+
           <div class="tab-content active" id="students" role="tabpanel">
             <div class="cards-grid">
               <div class="card">
@@ -684,7 +713,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="tab-content" id="alumni" role="tabpanel">
             <div class="cards-grid">
               <div class="card">
@@ -704,7 +733,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="tab-content" id="visitors" role="tabpanel">
             <div class="cards-grid">
               <div class="card">
@@ -733,7 +762,7 @@
       <div class="container">
         <h2 class="section-title" id="get-started-title">Choose Your Path</h2>
         <p class="section-subtitle">Join thousands of students and alumni building meaningful connections and creating opportunities together.</p>
-        
+
         <div class="cards-grid">
           <div class="card" onclick="openAuthModal('register', 'student')">
             <span class="card-icon">🎓</span>
@@ -741,14 +770,14 @@
             <p>Connect with alumni, explore opportunities, and grow your professional network.</p>
             <button class="btn btn-gradient" aria-label="Enter student portal">Enter Student Portal →</button>
           </div>
-          
+
           <div class="card" onclick="openAuthModal('register', 'alumni')">
             <span class="card-icon">💼</span>
             <h3>Alumni Portal</h3>
             <p>Mentor students, share experiences, and give back to your community.</p>
             <button class="btn btn-gradient" aria-label="Enter alumni portal">Enter Alumni Portal →</button>
           </div>
-          
+
           <div class="card" onclick="exploreAsVisitor()">
             <span class="card-icon">👥</span>
             <h3>Visitor Access</h3>
@@ -756,7 +785,7 @@
             <button class="btn btn-gradient" aria-label="Explore as visitor">Explore as Visitor →</button>
           </div>
         </div>
-        
+
         <!-- Stats Section -->
         <div class="stats">
           <div>
@@ -798,61 +827,105 @@
         <div class="modal-header">
           <h2 class="modal-title" id="modal-title">Welcome to AlumConnect</h2>
         </div>
-        
+
         <div class="tabs">
           <div class="tab-list" role="tablist">
             <button class="tab-trigger active" data-tab="login" role="tab" aria-selected="true" aria-controls="login">Login</button>
             <button class="tab-trigger" data-tab="register" role="tab" aria-selected="false" aria-controls="register">Register</button>
           </div>
-          
+
           <div class="tab-content active" id="login" role="tabpanel">
-            <form onsubmit="handleAuth(event, 'login')" aria-label="Login form">
+            <form onsubmit="handleAuth(event, 'login')" aria-label="Login form" method="POST" action="/login">
               <div class="form-group">
                 <label class="form-label" for="login-email">Email address</label>
                 <div class="form-input-icon">
-                  <input type="email" class="form-input" id="login-email" placeholder="Enter your email" required aria-required="true">
+                  <input
+                    type="email"
+                    class="form-input"
+                    id="login-email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                    aria-required="true"
+                  />
                   <span class="form-icon" aria-hidden="true">📧</span>
                 </div>
               </div>
-              
+
               <div class="form-group">
                 <label class="form-label" for="login-password">Password</label>
                 <div class="form-input-icon">
-                  <input type="password" class="form-input" id="login-password" placeholder="Enter your password" required aria-required="true">
+                  <input
+                    type="password"
+                    class="form-input"
+                    id="login-password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                    aria-required="true"
+                  />
                   <span class="form-icon" aria-hidden="true">🔒</span>
                 </div>
               </div>
-              
+
               <button type="submit" class="btn btn-gradient" style="width: 100%;" id="login-submit" aria-label="Submit login">Login</button>
             </form>
           </div>
-          
+
           <div class="tab-content" id="register" role="tabpanel">
-            <form onsubmit="handleAuth(event, 'register')" aria-label="Registration form">
+            <form onsubmit="handleAuth(event, 'register')" aria-label="Registration form" method="POST" action="/register">
               <div class="form-group">
                 <label class="form-label" for="register-name">Full Name</label>
                 <div class="form-input-icon">
-                  <input type="text" class="form-input" id="register-name" placeholder="Enter your full name" required aria-required="true">
+                  <input
+                    type="text"
+                    class="form-input"
+                    id="register-name"
+                    name="name"
+                    placeholder="Enter your full name"
+                    required
+                    aria-required="true"
+                  />
                   <span class="form-icon" aria-hidden="true">👤</span>
                 </div>
               </div>
-              
+
               <div class="form-group">
                 <label class="form-label" for="register-email">Email address</label>
                 <div class="form-input-icon">
-                  <input type="email" class="form-input" id="register-email" placeholder="Enter your email" required aria-required="true">
+                  <input
+                    type="email"
+                    class="form-input"
+                    id="register-email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                    aria-required="true"
+                  />
                   <span class="form-icon" aria-hidden="true">📧</span>
                 </div>
               </div>
-              
+
               <div class="form-group">
                 <label class="form-label" for="register-password">Password</label>
                 <div class="form-input-icon">
-                  <input type="password" class="form-input" id="register-password" placeholder="Create a password" required aria-required="true" minlength="8">
+                  <input
+                    type="password"
+                    class="form-input"
+                    id="register-password"
+                    name="password"
+                    placeholder="Create a password"
+                    minlength="8"
+                    required
+                    aria-required="true"
+                  />
                   <span class="form-icon" aria-hidden="true">🔒</span>
                 </div>
               </div>
-              
+
+              <!-- Hidden role input -->
+              <input type="hidden" name="role" id="register-role" />
+
               <button type="submit" class="btn btn-gradient" style="width: 100%;" id="register-submit" aria-label="Submit registration">Create Account</button>
             </form>
           </div>
@@ -925,16 +998,25 @@
         // Set active tab
         const targetTrigger = modal.querySelector(`[data-tab="${mode}"]`);
         const targetContent = modal.querySelector(`#${mode}`);
-        
+
         if (targetTrigger && targetContent) {
           targetTrigger.classList.add('active');
           targetTrigger.setAttribute('aria-selected', 'true');
           targetContent.classList.add('active');
         }
 
+        // Set hidden input role value for registration form
+        const registerRoleInput = document.getElementById('register-role');
+        if (registerRoleInput) {
+          registerRoleInput.value = role || '';
+        }
+
         modal.classList.add('show');
         document.body.style.overflow = 'hidden';
-        modal.querySelector('.form-input').focus();
+        const firstInput = modal.querySelector('.form-input');
+        if (firstInput) {
+          firstInput.focus();
+        }
       }
 
       function closeAuthModal() {
@@ -958,10 +1040,10 @@
 
       function handleAuth(event, type) {
         event.preventDefault();
-        
+
         if (isSubmitting) return;
         isSubmitting = true;
-        
+
         const form = event.target;
         const submitButton = form.querySelector('.btn-gradient');
         submitButton.disabled = true;
@@ -970,6 +1052,8 @@
           const name = form.querySelector('#register-name').value.trim();
           const email = form.querySelector('#register-email').value.trim();
           const password = form.querySelector('#register-password').value;
+          const roleInput = form.querySelector('#register-role');
+          const roleValue = roleInput ? roleInput.value : '';
 
           if (!name) {
             alert('Please enter your full name');
@@ -987,6 +1071,13 @@
 
           if (!validatePassword(password)) {
             alert('Password must be at least 8 characters long');
+            isSubmitting = false;
+            submitButton.disabled = false;
+            return;
+          }
+
+          if (!roleValue) {
+            alert('User role is missing. Please select your role properly.');
             isSubmitting = false;
             submitButton.disabled = false;
             return;
@@ -1011,13 +1102,14 @@
         }
 
         console.log(`${type} submitted for role: ${currentRole || 'general'}`);
-        
-        // Here you would typically handle the authentication
-        // For demo purposes, we'll just close the modal
-        closeAuthModal();
-        
-        // Show success message
-        alert(`${type === 'login' ? 'Login' : 'Registration'} successful!`);
+        console.log('Form role input value:', form.querySelector('#register-role') ? form.querySelector('#register-role').value : 'N/A');
+
+        // Actually submit the form to the backend after validation
+        form.submit();
+
+        // After submit, close modal and reset (optional here because page reloads)
+        // closeAuthModal();
+        // alert(`${type === 'login' ? 'Login' : 'Registration'} successful!`);
       }
 
       function exploreAsVisitor() {
@@ -1025,18 +1117,18 @@
       }
 
       // Event listeners
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('DOMContentLoaded', function () {
         initTabs();
 
         // Close modal when clicking outside
-        document.getElementById('authModal').addEventListener('click', function(e) {
+        document.getElementById('authModal').addEventListener('click', function (e) {
           if (e.target === this) {
             closeAuthModal();
           }
         });
 
         // Close modal with Escape key
-        document.addEventListener('keydown', function(e) {
+        document.addEventListener('keydown', function (e) {
           if (e.key === 'Escape') {
             closeAuthModal();
           }

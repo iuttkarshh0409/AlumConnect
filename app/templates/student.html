@@ -568,6 +568,57 @@
             display: inline-block;
             fill: currentColor;
         }
+         /* Flash messages */
+        .flash-messages { 
+            max-width: 500px; 
+            margin: 90px auto 20px; 
+            padding: 0 16px;
+            z-index: 2001;
+            position: relative;
+        }
+        .flash-message { 
+            border-radius: 0.5rem; padding: 0.75rem 1.2rem; margin-bottom: 10px; font-weight: 500;
+            background: #e9e9e9; color: #222;
+            box-shadow: 0 2px 6px rgba(60,60,60,0.07);
+        }
+        .flash-message.success { background: #daf3d2; color: #27692b; }
+        .flash-message.danger  { background: #f8d7da; color: #842029; }
+        .flash-message.info    { background: #cfe2ff; color: #084298; }
+        .flash-message.warning { background: #fff4cd; color: #856404; }
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: hsl(var(--primary));
+                padding: 1rem;
+                gap: 1rem;
+            }
+            .nav-menu.show {
+                display: flex;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .tab-list {
+                flex-direction: column;
+                max-width: 200px;
+            }
+            .table-container {
+                overflow-x: auto;
+            }
+        }
+        /* Animations (optional, you can keep more from your original if desired) */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
@@ -594,6 +645,19 @@
             <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">☰</button>
         </div>
     </nav>
+
+      <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-messages">
+          {% for category, msg in messages %}
+            <div class="flash-message {{ category }}">{{ msg }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+
 
     <!-- Main Content -->
     <section class="section" aria-labelledby="alumni-list-title">
